@@ -4,43 +4,48 @@
         <div class="about__school">
             <div class="about_school__inner">
                 <div class="about_school__title">О школе</div>
-                <div class="about_school__infoblock">
-                    <div class="infoblock__item">
-                        <div class="infoblock_item__ico">
-                            <img src="./components/assets/images/about_school/1.svg" alt="">
+                <div class="about_school__content">
+                    <div class="about_school__infoblock">
+                        <div class="infoblock__item">
+                            <div class="infoblock_item__ico">
+                                <img src="./components/assets/images/about_school/1.svg" alt="">
+                            </div>
+                            <div class="infoblock_item__text">
+                                Качество уроков всегда на высшем уровне, поскольку каждый урок отсматривается и анализируется;
+                            </div>
                         </div>
-                        <div class="infoblock_item__text">
-                            Качество уроков всегда на высшем уровне, поскольку каждый урок отсматривается и анализируется;
+                        <div class="infoblock__item">
+                            <div class="infoblock_item__ico">
+                                <img src="./components/assets/images/about_school/2.svg" alt="">
+                            </div>
+                            <div class="infoblock_item__text">
+                                Удобная и понятная система для управления <br> вашими уроками;
+                            </div>
                         </div>
+                        <div class="infoblock__item">
+                            <div class="infoblock_item__ico">
+                                <img src="./components/assets/images/about_school/3.svg" alt="">
+                            </div>
+                            <div class="infoblock_item__text">
+                                Ответы на любые вопросы можно узнать в чате <br> с преподавателем;
+                            </div>
+                        </div>
+                        <div class="infoblock__item">
+                            <div class="infoblock_item__ico">
+                                <img src="./components/assets/images/about_school/4.svg" alt="">
+                            </div>
+                            <div class="infoblock_item__text">
+                                Занятие с опытным преподавателем.
+                            </div>
+                        </div>
+                        <div class="buttonBox">
+                            <button class="buttonOrange">Перейти к предметам</button>
+                        </div>
+                        
                     </div>
-                    <div class="infoblock__item">
-                        <div class="infoblock_item__ico">
-                            <img src="./components/assets/images/about_school/2.svg" alt="">
-                        </div>
-                        <div class="infoblock_item__text">
-                            Удобная и понятная система для управления <br> вашими уроками;
-                        </div>
+                    <div class="about_school_man__image">
+                        <img src="./components/assets/images/about_school/Man.svg" alt="">
                     </div>
-                    <div class="infoblock__item">
-                        <div class="infoblock_item__ico">
-                            <img src="./components/assets/images/about_school/3.svg" alt="">
-                        </div>
-                        <div class="infoblock_item__text">
-                            Ответы на любые вопросы можно узнать в чате <br> с преподавателем;
-                        </div>
-                    </div>
-                    <div class="infoblock__item">
-                        <div class="infoblock_item__ico">
-                            <img src="./components/assets/images/about_school/4.svg" alt="">
-                        </div>
-                        <div class="infoblock_item__text">
-                            Занятие с опытным преподавателем.
-                        </div>
-                    </div>
-                    <div class="buttonBox">
-                        <button class="buttonOrange">Перейти к предметам</button>
-                    </div>
-                    
                 </div>
             </div>
         </div>
@@ -65,22 +70,37 @@ button{
     margin-top: 20px;
 }
 /* About School */
-    .about__school{
-        /* height: 500px; */
-        padding-top: 96px;
-    }
+.about__school{
+    padding-top: 96px;
+}
+.about_school__inner{
+    margin: 0 auto;
+}
+.about_school__title{
+    margin-bottom: 38px;
 
-    .about_school__title{
-        margin-bottom: 38px;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 54px;
 
-        font-weight: 800;
-        font-size: 44px;
-        line-height: 54px;
+    text-align: center;
 
-        text-align: center;
-
-        color: #30203D;
-    }
+    color: #30203D;
+}
+.about_school__content{
+    position: relative;
+    max-width: 862px;
+    max-height: 636px;
+    margin: 0 auto;
+}
+.about_school_man__image{
+    /* float: left; */
+    top: 0;
+    right: 0;
+    margin-right: -100px;
+    position: absolute;
+    /* z-index: 10; */
+}
 /* Infoblock */
 .about_school__infoblock{
     width: 100%;
@@ -190,4 +210,3 @@ button{
     background-color: #F8840D;
 }
 </style>
-
