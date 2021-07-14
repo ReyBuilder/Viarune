@@ -18,7 +18,7 @@
                             <img src="./components/assets/images/about_school/2.svg" alt="">
                         </div>
                         <div class="infoblock_item__text">
-                            Удобная и понятная система для управления вашими уроками;
+                            Удобная и понятная система для управления <br> вашими уроками;
                         </div>
                     </div>
                     <div class="infoblock__item">
@@ -26,7 +26,7 @@
                             <img src="./components/assets/images/about_school/3.svg" alt="">
                         </div>
                         <div class="infoblock_item__text">
-                            Ответы на любые вопросы можно узнать в чате с преподавателем;
+                            Ответы на любые вопросы можно узнать в чате <br> с преподавателем;
                         </div>
                     </div>
                     <div class="infoblock__item">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="buttonBox">
-                        <button class="buttonA">Перейти к предметам</button>
+                        <button class="buttonOrange">Перейти к предметам</button>
                     </div>
                     
                 </div>
@@ -58,6 +58,12 @@ export default {
 
 </script>
 <style scoped>
+/* Button addons */
+button{
+    padding: 18px 32px;
+    border-radius: 40px;
+    margin-top: 20px;
+}
 /* About School */
     .about__school{
         /* height: 500px; */
@@ -133,19 +139,16 @@ p{
 }
 
 /* Button */
-.buttonA{
-    /* width: 100%; */
-    /* max-width: 250px; */
-
-    display: inline-block;
-    vertical-align: top;
+.buttonOrange{
     padding: 18px 0;
     /* 63.5px */
 
     background: linear-gradient(97.42deg, #FB7A0D 0.1%, #FBAE0D 115.11%);
     box-shadow: 1px 4px 15px rgba(248, 132, 13, 0.35);
-    border-radius: 40px;
+}
 
+button{
+    font-family: Gilroy;
     font-size: 16px;
     font-weight: bold;
     line-height: 19px;
@@ -155,15 +158,12 @@ p{
     text-align: center;
 
     cursor: pointer;
-}
-
-button{
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: normal;
     margin: 0;
     padding: 0;
     border: none;
+
+    display: inline-block;
+    vertical-align: top;
 }
 
 .underlined{

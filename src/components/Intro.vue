@@ -28,7 +28,7 @@
                                 <div class="intro__subtitle">Онлайн-школа</div>
                                 <div class="intro__title">Viarune study</div>
                                 <div class="intro__text">Мы работаем чтобы сделать образование комфортным, доступным и качественным.</div>
-                                <button class="buttonA">Подобрать курс</button>
+                                <button class="buttonOrange">Подобрать курс</button>
                         </div>
                     </div>
                 </div>
@@ -38,6 +38,11 @@
 </template>
 
 <style scoped>
+/* Button radius&paddings */
+button{
+    padding: 18px 63.5px;
+    border-radius: 40px;
+}
 
 /*Intro*/
 .intro{
@@ -175,8 +180,5 @@
     width: 100%;
     margin: 0 auto;
     max-width: 1100px;
-}
-.pidorasi_atakuyut{
-  margin-top: 20px;
 }
 </style>
