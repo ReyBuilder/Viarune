@@ -40,31 +40,65 @@
             <div class="subj__card">
               <div class="card__header">
                 <div class="card__title">
-                    Язык программирования: Python
+                  Язык программирования: Python
                 </div>
                 <div class="card__logo">
-                    <img
-                      src="./assets/images/subj_cards/python-logo2.svg" alt=""/>
+                  <img
+                    src="./assets/images/subj_cards/python-logo2.svg"
+                    alt=""
+                  />
                 </div>
               </div>
               <div class="card__text">
-                  Научим вас и вашего ребенка кодить на высокоуровневом языке программирования. Без слез...
+                Научим вас и вашего ребенка кодить на высокоуровневом языке
+                программирования. Без слез...
               </div>
               <div class="card__underground">
-                  <a class="buttonWrapper" href="#">
-                    <div class="buttonBox buttonPurple">
-                        Записаться
-                    </div>
-                  </a>
-                  <a class="" href="#">
-                    <div class="">
-                        Подробнее
-                    </div>
-                  </a>
+                <a class="buttonWrapper" href="#">
+                  <div class="buttonBox buttonPurple">
+                    Записаться
+                  </div>
+                </a>
+                <a class="" href="#">
+                  <div class="">
+                    Подробнее
+                  </div>
+                </a>
               </div>
             </div>
             <div class="subj__card">2</div>
             <div class="subj__card">3</div>
+            <div class="subj__card">
+              <div class="card__header">
+                <div class="card__title">
+                  Язык программирования: Python
+                </div>
+                <div class="card__logo">
+                  <img
+                    src="./assets/images/subj_cards/python-logo2.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="card__text">
+                Научим вас и вашего ребенка кодить на высокоуровневом языке
+                программирования. Без слез...
+              </div>
+              <div class="card__underground">
+                <a class="buttonWrapper" href="#">
+                  <div class="buttonBox buttonPurple">
+                    Записаться
+                  </div>
+                </a>
+                <a class="" href="#">
+                  <div class="">
+                    Подробнее
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="subj__card">5</div>
+            <div class="subj__card">6</div>
           </div>
           <div class="subj_cards__inner"></div>
         </div>
@@ -77,6 +111,7 @@
 /* Our Subjects */
 .our_subjects {
   padding-top: 250px;
+  padding-bottom: 171px;
   position: relative;
 }
 
@@ -142,15 +177,18 @@
   display: flex;
   position: relative;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 /* Card */
 .subj__card {
   /* width: 100%; */
+  flex: 30%;
   max-width: 320px;
   background: #ffffff;
   box-shadow: 4px 4px 20px rgba(48, 32, 61, 0.1);
   border-radius: 6px;
   padding: 20px 20px 30px;
+  margin-bottom: 20px;
 }
 
 .card__header {
@@ -160,39 +198,36 @@
   margin-bottom: 20px;
 }
 
-.card__title{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
+.card__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
 
-    padding-top: 10px;
-    max-width: 175px;
-    text-align: left;
+  padding-top: 10px;
+  max-width: 175px;
+  text-align: left;
 }
 
-.card__text{
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 150%;
+.card__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
 
-    color: #30203D;
+  color: #30203d;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.card__underground{
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 10px;
+.card__underground {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
 }
 
 .buttonBox {
   padding: 18px 36px;
   border-radius: 40px;
 }
-/* .buttonWrapper {
-  max-width: 160px;
-} */
 </style>
