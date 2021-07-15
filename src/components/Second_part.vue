@@ -41,9 +41,11 @@
               Занятие с опытным преподавателем.
             </div>
           </div>
-          <div class="buttonBox">
-            <button class="buttonOrange">Перейти к предметам</button>
-          </div>
+          <a class="buttonWrapper" href="#">
+            <div class="buttonBox buttonOrange">
+              Перейти к предметам
+            </div>
+          </a>
         </div>
         <div class="about_school_man__image">
           <img src="./assets/images/about_school/Man.svg" alt="" />
@@ -54,10 +56,13 @@
 </template>
 <style scoped>
 /* Button addons */
-button {
+.buttonWrapper {
+  max-width: 236px;
+  margin-top: 20px;
+}
+.buttonBox {
   padding: 18px 32px;
   border-radius: 40px;
-  margin-top: 20px;
 }
 /* About School */
 .about__school {
@@ -85,12 +90,10 @@ button {
   margin: 0 auto;
 }
 .about_school_man__image {
-  /* float: left; */
   top: 0;
   right: 0;
   margin-right: -100px;
   position: absolute;
-  /* z-index: 10; */
 }
 /* Infoblock */
 .about_school__infoblock {

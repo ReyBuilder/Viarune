@@ -20,7 +20,7 @@
     </header>
     <div class="intro">
       <div class="intro__background">
-        <img src="./assets/images/intro/Intro_bg.svg" alt="" />
+        <img src="./assets/images/intro/Intro_bg2.svg" alt="" />
       </div>
       <div class="container">
         <div class="intro__content">
@@ -32,7 +32,11 @@
                 Мы работаем чтобы сделать образование комфортным, доступным и
                 качественным.
               </div>
-              <button class="buttonOrange">Подобрать курс</button>
+              <a class="buttonWrapper" href="#">
+                <div class="buttonBox buttonOrange">
+                  Подобрать курс
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -43,11 +47,13 @@
 
 <style scoped>
 /* Button radius&paddings */
-button {
-  padding: 18px 63.5px;
+.buttonBox {
+  padding: 18px 63px;
   border-radius: 40px;
 }
-
+.buttonWrapper {
+  max-width: 256px;
+}
 /*Intro*/
 .intro {
   width: 100%;
@@ -103,7 +109,6 @@ button {
   left: 0;
   right: 0;
   position: absolute;
-  /* border-bottom: 1px solid rgba(255,255,255,0.2); */
   z-index: 1000;
   width: 100%;
 }

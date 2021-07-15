@@ -1,75 +1,94 @@
 body {
-    background: rgba(250, 242, 255, 0.5);
-    margin: 0;
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-  }
-  
-  *,
-  *:after,
-  *:before {
-    box-sizing: border-box;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin: 0;
-  }
-  
-  p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Button */
-  .buttonOrange {
-    background: linear-gradient(97.42deg, #fb7a0d 0.1%, #fbae0d 115.11%);
-    box-shadow: 1px 4px 15px rgba(248, 132, 13, 0.35);
-  }
-  
-  button {
-    font-family: Gilroy;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 19px;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-  
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    border: none;
-  
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  .underlined {
-    position: relative;
-    color: #eee;
-  }
-  
-  .underlined:hover {
-    position: relative;
-    color: #f8840d;
-    cursor: pointer;
-  }
-  .underlined:after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #eee;
-    position: absolute;
-    top: 18px;
-    opacity: 1;
-  }
-  .underlined:hover:after {
-    background-color: #f8840d;
-  }
+  background: rgba(250, 242, 255, 0.5);
+  margin: 0;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+a:focus {
+  outline: none;
+}
+/* Button */
+.buttonWrapper {
+  display: block;
+  padding: 3px;
+}
+
+.buttonWrapper:focus {
+  padding: 2px;
+  border: #30203d 1px solid;
+  border-radius: 30px;
+}
+
+.buttonOrange {
+  background: linear-gradient(97.42deg, #fb7a0d 0.1%, #fbae0d 115.11%);
+  box-shadow: 1px 4px 15px rgba(248, 132, 13, 0.35);
+}
+
+.buttonFilter {
+  background: #FFFFFF;
+}
+
+.buttonBox {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  display: inline-block;
+  vertical-align: top;
+
+  width: 100%;
+}
+
+.underlined {
+  position: relative;
+  color: #eee;
+}
+
+.underlined:hover {
+  position: relative;
+  color: #f8840d;
+  cursor: pointer;
+}
+.underlined:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  position: absolute;
+  top: 18px;
+  opacity: 1;
+}
+.underlined:hover:after {
+  background-color: #f8840d;
+}
