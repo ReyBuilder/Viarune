@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="our_subjects">
-      <div class="rudiment">
+      <div class="leftBg">
         <img src="./assets/images/rudiment.svg" alt="" />
       </div>
       <div class="subj__container">
@@ -115,9 +115,9 @@
   position: relative;
 }
 
-.rudiment {
+.leftBg {
   position: absolute;
-  top: -200px;
+  top: -210px;
   z-index: -1;
 }
 .subj__container {
@@ -168,6 +168,9 @@
   border-radius: 50px;
 }
 
+.buttonWrapper {
+  border-radius: 50px;
+}
 /* Cards Containers */
 .subj__cards {
   padding-top: 40px;

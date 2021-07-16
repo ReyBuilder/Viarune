@@ -31,12 +31,13 @@ a:focus {
 .buttonWrapper {
   display: block;
   padding: 3px;
+  /* border-radius: 30px; */
 }
 
 .buttonWrapper:focus {
   padding: 2px;
   border: #30203d 1px solid;
-  border-radius: 30px;
+  /* border-radius: 30px; */
 }
 
 .buttonOrange {

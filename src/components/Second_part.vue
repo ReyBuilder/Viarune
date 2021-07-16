@@ -59,6 +59,7 @@
 .buttonWrapper {
   max-width: 236px;
   margin-top: 20px;
+  border-radius: 40px;
 }
 .buttonBox {
   padding: 18px 32px;

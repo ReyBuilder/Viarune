@@ -53,7 +53,9 @@
 }
 .buttonWrapper {
   max-width: 256px;
+  border-radius: 40px;
 }
+
 /*Intro*/
 .intro {
   width: 100%;
