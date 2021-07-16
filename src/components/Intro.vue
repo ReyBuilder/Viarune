@@ -20,7 +20,7 @@
     </header>
     <div class="intro">
       <div class="intro__background">
-        <img src="./assets/images/intro/Intro_bg2.svg" alt="" />
+        <img src="./assets/images/intro/Intro_bg.svg" alt="" />
       </div>
       <div class="container">
         <div class="intro__content">
