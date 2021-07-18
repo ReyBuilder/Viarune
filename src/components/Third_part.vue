@@ -209,6 +209,8 @@
   padding-top: 10px;
   max-width: 175px;
   text-align: left;
+
+  color: #30203D
 }
 
 .card__text {
