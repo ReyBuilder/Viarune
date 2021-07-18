@@ -53,6 +53,9 @@
 .appointment__main {
   position: relative;
   width: 100%;
+
+  padding-top: 210px;
+  padding-bottom: 24%;
   /* max-height: 1046px; */
 }
 
@@ -61,6 +64,7 @@
   object-fit: cover;
   position: absolute;
   z-index: -1;
+  margin-top: -210px;
   /* max-height: 1046px; */
 }
 
@@ -68,21 +72,17 @@
   top: 0;
   /* bottom: 0; */
   /* position: absolute; */
-  margin: 35% auto 26%;
+  margin-top: 27px;
+  /* margin-bottom: 274px; */
 
   width: 100%;
   max-width: 405px;;
 }
 
 .appointment__header {
-  top: 0;
-  /* bottom: 0; */
-  right: 0;
-  left: 0;
-  /* position: absolute; */
   margin: 0 auto;
 
-  margin-top: 250px;
+  /* padding-top: 20%; */
   text-align: center;
   color: #fff;
 }
@@ -122,9 +122,11 @@
 }
 
 .container {
+    /* top: 0; */
   width: 100%;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 950px;
+  /* position: relative; */
 }
 
 /* Inputs */

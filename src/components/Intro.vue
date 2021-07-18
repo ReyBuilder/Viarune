@@ -140,24 +140,28 @@
   vertical-align: top;
 
   position: relative;
+
+  border-radius: 30px;
+  padding: 4px 10px 7px;
 }
 
 .nav__item:hover {
   font-weight: 500;
   color: #f8840d;
+  text-decoration: underline;
 }
 
 .nav__item:after {
   display: block;
   content: "";
   opacity: 0;
-  width: 100%;
+  /* width: 79%; */
   height: 1px;
   font-weight: 500;
   color: #f8840d;
   background-color: #f8840d;
   position: absolute;
-  top: 18px;
+  top: 20px;
   /* transition: opacity .1s linear; */
 }
 
@@ -165,6 +169,9 @@
   opacity: 1;
 }
 
+.nav__item:focus{
+  outline: 1px solid #FFFFFF;
+}
 .nav__phone {
   display: flex;
   align-items: center;

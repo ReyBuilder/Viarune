@@ -59,7 +59,7 @@
                     Записаться
                   </div>
                 </a>
-                <a class="" href="#">
+                <a class="card__link" href="#">
                   <div class="">
                     Подробнее
                   </div>
@@ -210,7 +210,7 @@
   max-width: 175px;
   text-align: left;
 
-  color: #30203D
+  color: #30203d;
 }
 
 .card__text {
@@ -231,6 +231,28 @@
   padding-right: 10px;
 }
 
+.card__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 4px 10px 7px;
+  
+  color: #30203d;
+
+  border-radius: 30px;
+}
+
+.card__link:hover {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #F8840D;
+}
+
+.card__link:focus{
+  outline: 1px solid #30203D;
+}
 .buttonBox {
   padding: 18px 36px;
   border-radius: 40px;
