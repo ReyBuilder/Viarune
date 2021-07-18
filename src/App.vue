@@ -4,6 +4,7 @@
     <About_school></About_school>
     <About_subj></About_subj>
     <Appointment></Appointment>
+    <About_school></About_school>
   </div>
 </template>
 <script>
