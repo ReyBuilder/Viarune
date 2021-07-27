@@ -148,6 +148,10 @@
 .nav__item:hover {
   font-weight: 500;
   color: #f8840d;
+  /* text-decoration: underline; */
+}
+
+.nav__item:active{
   text-decoration: underline;
 }
 

@@ -4,8 +4,8 @@
     <About_school></About_school>
     <About_subj></About_subj>
     <Appointment></Appointment>
-    <!-- <About_school></About_school> -->
-    <Underground></Underground>
+    <Footer></Footer>
+
   </div>
 </template>
 <script>
@@ -13,7 +13,7 @@ import Intro from "./components/Intro.vue";
 import About_school from "./components/Second_part.vue";
 import About_subj from "./components/Third_part.vue";
 import Appointment from "./components/Fourth_part.vue";
-import Underground from "./components/Footer.vue"
+import Footer from "./components/Footer.vue"
 
 export default {
   name: "App",
@@ -22,7 +22,7 @@ export default {
     About_school,
     About_subj,
     Appointment,
-    Underground,
+    Footer,
   },
   created() {
     document.title = "Viarune study";
