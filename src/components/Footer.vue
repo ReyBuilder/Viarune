@@ -10,21 +10,15 @@
                         Наши соц.сети:
                     </div>
                     <div class="socials__icons">
-                        <div class="socials_icons__item">
-                            <img src="./assets/icons/icon_vk.svg" alt="" />
-                        </div>
-                        <div class="socials_icons__item">
-                            <img
-                                src="./assets/icons/icon_facebook.svg"
-                                alt=""
-                            />
-                        </div>
-                        <div class="socials_icons__item">
-                            <img
-                                src="./assets/icons/icon_instagram.svg"
-                                alt=""
-                            />
-                        </div>
+                        <a class="icon__wrapper" href="#">
+                            <div class="iconBox" id="vk"></div>
+                        </a>
+                        <a class="icon__wrapper" href="#">
+                            <div class="iconBox" id="fb"></div>
+                        </a>
+                        <a class="icon__wrapper" href="#">
+                            <div class="iconBox" id="inst"></div>
+                        </a>
                     </div>
                 </div>
                 <div class="phone__block">
@@ -41,32 +35,36 @@
                     </div>
                 </div>
                 <div class="socials__icons">
-                    <div class="socials_icons__item">
-                        <img src="./assets/icons/icon_telegram.svg" alt="" />
+                        <a class="icon__wrapper" href="#">
+                            <div class="iconBox" id="tg"></div>
+                        </a>
+                        <a class="icon__wrapper" href="#">
+                            <div class="iconBox" id="ws"></div>
+                        </a>
+                        <a class="icon__wrapper" href="#">
+                            <div class="iconBox" id="vb"></div>
+                        </a>
                     </div>
-                    <div class="socials_icons__item">
-                        <img src="./assets/icons/icon_whatsapp.svg" alt="" />
-                    </div>
-                    <div class="socials_icons__item">
-                        <img src="./assets/icons/icon_viber.svg" alt="" />
-                    </div>
-                </div>
             </div>
             <div class="right__part">
                 <div class="title Docs">
                     Документы
                 </div>
                 <div class="link__wrapper">
-                    <a class="underlined__item" href="#">Политика конфиденциальности</a>
+                    <a class="underlined__item" href="#"
+                        >Политика конфиденциальности</a
+                    >
                 </div>
                 <div class="link__wrapper">
-                    <a class="underlined__item" href="#">Обработка персональных данных</a>
+                    <a class="underlined__item" href="#"
+                        >Обработка персональных данных</a
+                    >
                 </div>
                 <div class="link__wrapper">
                     <a class="underlined__item" href="#">Договор-оферта</a>
                 </div>
                 <div class="company__info">
-                    ООО "Онлайн-школа Virion" <br>
+                    ООО "Онлайн-школа Virion" <br />
                     ОГРН: 54646512146512
                 </div>
             </div>
@@ -100,21 +98,90 @@
 /* Left Part */
 .socials {
     /* max-width: 116px; */
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 .socials__text {
     line-height: 19px;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
 }
-.socials_icons__item {
-    margin-right: 10px;
 
-    /* width: 32px;
-    height: 32px; */
+/* Иконки непосредственно */
+.icon__wrapper {
+    display: block;
+    padding: 3px;
+    border-radius: 3px;
+
+    margin-right: 10px;
+    margin-left: -1px;
+    /* max-width: 34px; */
 }
+
+.icon__wrapper:hover {
+    padding: 2px;
+    border: rgba(248, 132, 13, 0.9) 1px solid;
+}
+
+.icon__wrapper:focus{
+    padding: 0;
+    border: #30203d 3px double;
+} 
+
+.iconBox {
+    width: 32px;
+    height: 32px;
+
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    display: inline-block;
+    vertical-align: top;
+}
+
+#vk {
+    background: url("./assets/icons/icon_vk.svg") center;
+}
+
+#fb {
+    background: url("./assets/icons/icon_facebook.svg") center;
+}
+
+#inst {
+    background: url("./assets/icons/icon_instagram.svg") center;    
+}
+
+#tg{
+    background: url("./assets/icons/icon_telegram.svg") center;
+}
+
+#ws{
+    background: url("./assets/icons/icon_whatsapp.svg") center;
+}
+
+#vb{
+    background: url("./assets/icons/icon_viber.svg") center;
+}
+
+.socials__icon:focus {
+    outline: 1px solid rgba(48, 32, 61, 0.9);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
 
 .socials_icons__item:hover {
+    padding: 0px;
     border: 1px solid rgba(248, 132, 13, 0.9);
+    border-radius: 3px;
+}
+
+.socials_icons__item:focus {
+    padding: 2px;
+    border: 1px solid rgba(48, 32, 61, 0.9);
     border-radius: 3px;
 }
 
@@ -125,6 +192,7 @@
     max-width: 116px;
 }
 
+/* Phone */
 .phone__block {
     line-height: 19px;
 }
@@ -132,13 +200,16 @@
 .phone__number {
     position: relative;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     margin-top: 6px;
-    margin-bottom: 6px;
+}
+
+.phone__icon{
+    height: 32px;
 }
 
 .phone__digits {
-    margin-top: 7px;
+    /* margin-top: 7px; */
     padding-left: 3px;
 }
 
@@ -150,12 +221,11 @@
     margin-bottom: 8px;
 }
 
-.link__wrapper{
+.link__wrapper {
     margin-bottom: 10px;
 }
 
 .underlined__item {
-
     /* margin-left: auto; */
     line-height: 150%;
     position: relative;
@@ -165,8 +235,8 @@
     /* text-decoration: underline; */
 }
 
-.underlined__item:hover{
-    color: #F8840D;
+.underlined__item:hover {
+    color: #f8840d;
 }
 
 .underlined__item:after {
@@ -182,11 +252,12 @@
 }
 
 .underlined__item:hover:after {
-    background-color: #F8840D;
+    background-color: #f8840d;
 }
 
-.company__info{
+.company__info {
     margin-top: 26px;
     line-height: 19px;
+    height: 38px;
 }
 </style>

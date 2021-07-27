@@ -228,7 +228,7 @@
   position: relative;
   justify-content: space-between;
   align-items: center;
-  padding-right: 10px;
+  /* padding-right: 10px; */
 }
 
 .card__link {
@@ -236,6 +236,7 @@
   font-size: 16px;
   line-height: 19px;
   padding: 4px 10px 7px;
+  /* margin-left: 12px; */
   
   color: #30203d;
 
