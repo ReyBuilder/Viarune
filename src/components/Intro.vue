@@ -9,12 +9,12 @@
           <a class="nav__item" href="#">О школе</a>
           <a class="nav__item" href="#">Предметы</a>
           <a class="nav__item" href="#">Пробный урок</a>
-          <div class="nav__phone">
+          <a class="nav__phone" href="#">
             <div class="nav_phone__icon">
               <img src="./assets/icons/icon_intro_call.svg" alt="" />
             </div>
             <div class="nav_phone__number underlined">+7 912 345-67-89</div>
-          </div>
+          </a>
         </nav>
       </div>
     </header>
@@ -133,7 +133,7 @@
   color: #eee;
   text-decoration: none;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 19px;
 
   display: inline-block;
@@ -146,9 +146,7 @@
 }
 
 .nav__item:hover {
-  font-weight: 500;
   color: #f8840d;
-  /* text-decoration: underline; */
 }
 
 .nav__item:active{
@@ -166,7 +164,6 @@
   background-color: #f8840d;
   position: absolute;
   top: 20px;
-  /* transition: opacity .1s linear; */
 }
 
 .nav__item:active:after {
@@ -182,6 +179,16 @@
   align-items: center;
   font-weight: 500;
   line-height: 19px;
+  border-radius: 30px;
+
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+.nav__phone:focus {
+  box-shadow: 0 0 0 1px #fff
 }
 
 .nav_phone__number {
