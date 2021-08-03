@@ -1,27 +1,27 @@
 <template>
   <div>
-    <!-- <Intro></Intro>
+    <Intro></Intro>
     <About_school></About_school>
     <About_subj></About_subj>
-    <Appointment></Appointment> -->
+    <Appointment></Appointment>
     <Footer></Footer>
 
   </div>
 </template>
 <script>
-// import Intro from "./components/Intro.vue";
-// import About_school from "./components/Second_part.vue";
-// import About_subj from "./components/Third_part.vue";
-// import Appointment from "./components/Fourth_part.vue";
+import Intro from "./components/Intro.vue";
+import About_school from "./components/Second_part.vue";
+import About_subj from "./components/Third_part.vue";
+import Appointment from "./components/Fourth_part.vue";
 import Footer from "./components/Footer.vue"
 
 export default {
   name: "App",
   components: {
-    // Intro,
-    // About_school,
-    // About_subj,
-    // Appointment,
+    Intro,
+    About_school,
+    About_subj,
+    Appointment,
     Footer,
   },
   created() {

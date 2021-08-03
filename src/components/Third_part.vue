@@ -259,7 +259,7 @@ export default ({
 }
 
 .card__link:focus{
-  outline: 1px solid #30203D;
+  box-shadow: 0 0 0 1px #30203D;
 }
 .buttonBox {
   padding: 18px 36px;

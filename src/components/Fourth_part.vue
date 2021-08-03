@@ -1,10 +1,6 @@
 <template>
     <div class="appointment__main">
         <div class="appointment__bg">
-            <!-- <img
-        src="./assets/images/appointment/appointment_bg2.svg"
-        alt="appointment__bg"
-      /> -->
         </div>
         <div class="container">
             <div class="appointment__header">
@@ -78,8 +74,8 @@ export default ({
 }
 
 .buttonBox:focus {
-    outline-offset: 3px;
-    outline: 1px solid #30203d;
+    box-shadow: 0 0 0 2px #FEFCFF,
+                0 0 0 3px #30203D;
 }
 /* Main part & background */
 .appointment__main {
@@ -90,25 +86,11 @@ export default ({
     background-position: center center;
     padding-top: 210px;
     padding-bottom: 24%;
-    /* max-height: 1046px; */
 }
-
-/* .appointment__bg img {
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-  z-index: -1;
-  margin-top: -210px;
-  /* max-height: 1046px;
-} */
 
 .appointment__content {
     top: 0;
-    /* bottom: 0; */
-    /* position: absolute; */
     margin-top: 27px;
-    /* margin-bottom: 274px; */
-
     width: 100%;
     max-width: 405px;
 }
@@ -116,7 +98,6 @@ export default ({
 .appointment__header {
     margin: 0 auto;
 
-    /* padding-top: 20%; */
     text-align: center;
     color: #fff;
 }
@@ -156,11 +137,9 @@ export default ({
 }
 
 .container {
-    /* top: 0; */
     width: 100%;
     margin: 0 auto;
     max-width: 925px;
-    /* position: relative; */
 }
 
 /* Inputs */
@@ -181,8 +160,9 @@ export default ({
 }
 
 .inputCustom:focus {
-    outline-offset: 3px;
-    outline: 1px solid #30203d;
+    outline: none;
+    box-shadow: 0 0 0 2px #FEFCFF,
+                0 0 0 3px #30203D;
 }
 
 label {

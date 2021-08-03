@@ -174,8 +174,9 @@
 }
 
 .nav__item:focus{
-  outline: 1px solid #FFFFFF;
+  box-shadow: 0 0 0 1px #fff;
 }
+
 .nav__phone {
   display: flex;
   align-items: center;

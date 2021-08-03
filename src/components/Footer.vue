@@ -97,31 +97,35 @@
 }
 /* Left Part */
 .socials {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 .socials__text {
     line-height: 19px;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
 }
 
 /* Иконки непосредственно */
 .icon__wrapper {
     display: block;
-    padding: 3px;
     border-radius: 3px;
-
     margin-right: 10px;
-    margin-left: -1px;
+
+    width: 32px;
+    height: 32px;
 }
 
 .icon__wrapper:hover {
-    padding: 2px;
-    border: rgba(248, 132, 13, 0.9) 1px solid;
+    box-shadow: 
+       0 0 0 1px rgba(248, 132, 13, 0.9);
 }
 
 .icon__wrapper:focus{
-    padding: 0;
-    border: #30203d 3px double;
+    /* padding: 0; */
+    /* border: #30203d 1px solid; */
+    box-shadow: 
+    0 0 0 1px #30203d,
+    0 0 0 3px rgba(250, 242, 255),
+    0 0 0 4px #30203d;
 } 
 
 .iconBox {
@@ -193,6 +197,7 @@
 /* Phone */
 .phone__block {
     line-height: 19px;
+    margin-bottom: 10px;
 }
 
 .phone__number {
