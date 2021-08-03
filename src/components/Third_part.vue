@@ -8,7 +8,7 @@
         <div class="subj__title">
           Наши предметы
         </div>
-        <div class="subj__filters">
+        <div class="subj__filters" v-if="showFilters">
           <a class="buttonWrapper" href="#">
             <div class="buttonBoxFilter buttonFilter">
               Все
@@ -107,6 +107,16 @@
   </div>
 </template>
 
+<script>
+export default ({
+  data(){
+    return{
+      showFilters: false,
+    }
+  }
+})
+</script>
+
 <style scoped>
 /* Our Subjects */
 .our_subjects {
@@ -184,7 +194,6 @@
 }
 /* Card */
 .subj__card {
-  /* width: 100%; */
   flex: 30%;
   max-width: 320px;
   background: #ffffff;
@@ -228,7 +237,6 @@
   position: relative;
   justify-content: space-between;
   align-items: center;
-  /* padding-right: 10px; */
 }
 
 .card__link {
@@ -236,7 +244,6 @@
   font-size: 16px;
   line-height: 19px;
   padding: 4px 10px 7px;
-  /* margin-left: 12px; */
   
   color: #30203d;
 

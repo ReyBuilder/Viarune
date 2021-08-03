@@ -97,7 +97,6 @@
 }
 /* Left Part */
 .socials {
-    /* max-width: 116px; */
     margin-bottom: 7px;
 }
 .socials__text {
@@ -113,7 +112,6 @@
 
     margin-right: 10px;
     margin-left: -1px;
-    /* max-width: 34px; */
 }
 
 .icon__wrapper:hover {
@@ -209,7 +207,6 @@
 }
 
 .phone__digits {
-    /* margin-top: 7px; */
     padding-left: 3px;
 }
 
@@ -226,13 +223,11 @@
 }
 
 .underlined__item {
-    /* margin-left: auto; */
     line-height: 150%;
     position: relative;
     text-decoration: none;
 
     color: #30203d;
-    /* text-decoration: underline; */
 }
 
 .underlined__item:hover {
