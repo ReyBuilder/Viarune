@@ -14,7 +14,9 @@
             <div class="appointment__content">
                 <form class="appointment_input__form">
                     <div class="form__item">
-                        <input class="inputCustom" href="#" />
+                        <div class="input__wrapper">
+                            <input class="inputCustom" href="#" />
+                        </div>
                     </div>
                     <div class="form__item">
                         <input class="inputCustom" type="text" />
@@ -23,16 +25,15 @@
                     <div class="form__item">
                         <input v-on:input.prevent="phoneValidation" v-model="phone" class="inputCustom" type="text" maxlength="16"/>
                     </div>
+                    <!-- Чекбокс -->
                     <div class="form_item__checkbox form__item">
-                        <input
-                            type="checkbox"
-                            id="subscribe"
-                            name="subscribe"
-                            value="newsletter"
-                        />
-                        <label for="subscribe"
-                            >Я согласен с условиями обработки <br />
-                            персональных данных
+                        <div class="checkbox_custom"  v-on:click="checkBoxChecked=!checkBoxChecked"
+                        v-bind:class="{checkbox_bgrd: checkBoxChecked}">
+                            
+                        </div>
+                        <label v-on:click="checkBoxChecked=!checkBoxChecked" >
+                            Я согласен с условиями обработки <br />
+                            персональных данных {{checkBoxChecked}}
                         </label>
                     </div>
                     <div>
@@ -62,6 +63,7 @@ export default ({
         return {
             phone:"+7",
             phoneError:"",
+            checkBoxChecked:true,
         }
     }
 })
@@ -130,7 +132,6 @@ export default ({
 .form_item__checkbox {
     position: relative;
     display: flex;
-    align-items: flex-start;
 
     width: 100%;
     max-width: 338px;
@@ -165,16 +166,42 @@ export default ({
                 0 0 0 3px #30203D;
 }
 
+.inputCustom:active {
+    border: 0.5px solid #FB7A0D;
+}
+
 label {
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
 
     color: rgba(48, 32, 61, 0.6);
+
+    cursor: pointer
 }
-.checkbox {
+
+label::selection{
+    background-color: none;
+}
+.checkbox_custom {
+    margin-top:2px;
+    margin-right:9px;
+
     background: #feffff;
     border: 0.5px solid rgba(48, 32, 61, 0.6);
     border-radius: 9px;
+    height: 20px;
+    width: 20px;
+
+    cursor: pointer;
+}
+
+.checkbox_custom:active{
+    box-shadow: 0 0 0 1px #FFF,
+                0 0 0 2px #30203D;
+}
+
+.checkbox_bgrd{
+    background: url("./assets/images/appointment/appointment__checkboxClick.svg") center no-repeat;
 }
 </style>

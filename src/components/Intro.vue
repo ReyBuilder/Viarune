@@ -6,7 +6,7 @@
           <div class="nav__item">
             <img src="./assets/images/intro/Header_logo.svg" alt="Logo" />
           </div>
-          <a class="nav__item" href="#">О школе</a>
+          <a class="nav__item" href="#about_school">О школе</a>
           <a class="nav__item" href="#">Предметы</a>
           <a class="nav__item" href="#">Пробный урок</a>
           <a class="nav__phone" href="#">
@@ -185,6 +185,7 @@
   padding-left: 12px;
   margin-right: -12px;
   margin-left: -12px;
+  text-decoration: none;
 }
 
 .nav__phone:focus {
@@ -192,7 +193,6 @@
 }
 
 .nav_phone__number {
-  /* padding-top: 2px; */
   padding-bottom: 4px;
 }
 

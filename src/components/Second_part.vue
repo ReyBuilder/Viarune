@@ -1,5 +1,5 @@
 <template>
-  <div class="about__school">
+  <div class="about__school" name="about_school">
     <div class="about_school__inner">
       <div class="about_school__title">
         О школе

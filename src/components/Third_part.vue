@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="our_subjects">
       <div class="leftBg">
         <img src="./assets/images/rudiment.svg" alt="" />
@@ -104,7 +103,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
