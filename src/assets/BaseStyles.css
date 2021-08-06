@@ -47,6 +47,7 @@ a:focus {
   background: linear-gradient(141.18deg, #4E3D95 -8.71%, #413373 104.75%);
 }
 .buttonFilter {
+  /* Задает белый фон для конкретных кнопок */
   background: #FFFFFF;
 }
 

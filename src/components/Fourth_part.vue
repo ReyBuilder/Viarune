@@ -56,7 +56,7 @@
                         ></div>
                         <label v-on:click="checkBoxChecked = !checkBoxChecked">
                             Я согласен с условиями обработки <br />
-                            персональных данных {{ checkBoxChecked }}
+                            персональных данных
                         </label>
                     </div>
                     <div>
