@@ -56,7 +56,7 @@
                         </div>
                         <div class="card__underground">
                             <a class="card__button" href="#">
-                                <div class="buttonBox buttonPurple">
+                                <div class="buttonBox">
                                     Записаться
                                 </div>
                             </a>
@@ -274,11 +274,24 @@ export default {
 }
 
 .card__button{
-	border-radius: 30px;
+	border-radius: 40px;
 }
+
+
 .card__button:focus {
 	box-shadow: 0 0 0 2px #fff,
-				0 0 0 3px #30203D;
+				0 0 0 3px #070707;
+}
+
+.buttonBox {
+    padding: 18px 36px;
+    border-radius: 40px;
+    background: linear-gradient(141.18deg, #4E3D95 -8.71%, #413373 104.75%);
+}
+
+.buttonBox:hover{
+    background: linear-gradient(97.42deg, #FB7A0D 0.1%, #FBAE0D 115.11%);
+    box-shadow: 1px 4px 15px rgba(248, 132, 13, 0.55);
 }
 
 .card__link {
@@ -303,8 +316,5 @@ export default {
 .card__link:focus {
     box-shadow: 0 0 0 1px #30203d;
 }
-.buttonBox {
-    padding: 18px 36px;
-    border-radius: 40px;
-}
+
 </style>
