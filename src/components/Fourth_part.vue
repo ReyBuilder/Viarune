@@ -1,7 +1,6 @@
 <template>
     <div class="appointment__main">
-        <div class="appointment__bg">
-        </div>
+        <div class="appointment__bg"></div>
         <div class="container">
             <div class="appointment__header">
                 <div class="appointment__title">
@@ -14,26 +13,50 @@
             <div class="appointment__content">
                 <form class="appointment_input__form">
                     <div class="form__item">
+                        <!-- Фамилия Имя -->
                         <div class="input__wrapper">
+                            <div class="input__checkMark"></div>
                             <input class="inputCustom" href="#" />
+                            <div class="input__errorLabel">
+                                Неверный формат. Введите только буквы.
+                            </div>
                         </div>
                     </div>
                     <div class="form__item">
-                        <input class="inputCustom" type="text" />
+                        <!-- Телефонька -->
+                        <div class="input__wrapper">
+                            <div class="input__checkMark"></div>
+                            <input
+                                v-on:input.prevent="phoneValidation"
+                                v-model="phone"
+                                class="inputCustom"
+                                type="text"
+                            />
+                            <div class="input__errorLabel">
+                                Неверный формат. Введите только цифры.
+                            </div>
+                        </div>
                     </div>
-                    <!-- Телефонька -->
                     <div class="form__item">
-                        <input v-on:input.prevent="phoneValidation" v-model="phone" class="inputCustom" type="text" maxlength="16"/>
+                        <!-- Почта -->
+                        <div class="input__wrapper">
+                            <div class="input__checkMark"></div>
+                            <input class="inputCustom" type="text" />
+                            <div class="input__errorLabel">
+                                Неверный формат. Введите только цифры.
+                            </div>
+                        </div>
                     </div>
                     <!-- Чекбокс -->
                     <div class="form_item__checkbox form__item">
-                        <div class="checkbox_custom"  v-on:click="checkBoxChecked=!checkBoxChecked"
-                        v-bind:class="{checkbox_bgrd: checkBoxChecked}">
-                            
-                        </div>
-                        <label v-on:click="checkBoxChecked=!checkBoxChecked" >
+                        <div
+                            class="checkbox_custom"
+                            v-on:click="checkBoxChecked = !checkBoxChecked"
+                            v-bind:class="{ checkbox_bgrd: checkBoxChecked }"
+                        ></div>
+                        <label v-on:click="checkBoxChecked = !checkBoxChecked">
                             Я согласен с условиями обработки <br />
-                            персональных данных {{checkBoxChecked}}
+                            персональных данных {{ checkBoxChecked }}
                         </label>
                     </div>
                     <div>
@@ -47,26 +70,31 @@
     </div>
 </template>
 <script>
-
-export default ({
-    methods:{
-        phoneValidation:function(){
-            if (this.phone.substring(0,2)!=="+7")
-                this.phone = "+7"+this.phone;
-            if (!this.phone[2] && this.phone[2]!==' ')
-                this.phone=this.phone.substring(0,2)+" "+this.phone.substring(2, this.phone.length);
-            if (!this.phone[6] && this.phone[6]!==' ')
-                this.phone=this.phone.substring(0,6)+" "+this.phone.substring(6, this.phone.length);
-        }
+export default {
+    methods: {
+        phoneValidation: function() {
+            if (this.phone.substring(0, 2) !== "+7")
+                this.phone = "+7" + this.phone;
+            if (!this.phone[2] && this.phone[2] !== " ")
+                this.phone =
+                    this.phone.substring(0, 2) +
+                    " " +
+                    this.phone.substring(2, this.phone.length);
+            if (!this.phone[6] && this.phone[6] !== " ")
+                this.phone =
+                    this.phone.substring(0, 6) +
+                    " " +
+                    this.phone.substring(6, this.phone.length);
+        },
     },
     data() {
         return {
-            phone:"+7",
-            phoneError:"",
-            checkBoxChecked:true,
-        }
-    }
-})
+            phone: "+7",
+            phoneError: "",
+            checkBoxChecked: true,
+        };
+    },
+};
 </script>
 
 <style scoped>
@@ -76,9 +104,9 @@ export default ({
 }
 
 .buttonBox:focus {
-    box-shadow: 0 0 0 2px #FEFCFF,
-                0 0 0 3px #30203D;
+    box-shadow: 0 0 0 2px #fefcff, 0 0 0 3px #30203d;
 }
+
 /* Main part & background */
 .appointment__main {
     position: relative;
@@ -144,6 +172,33 @@ export default ({
 }
 
 /* Inputs */
+.input__wrapper {
+    position: relative;
+}
+
+.input__checkMark {
+    position: absolute;
+    background: url("./assets/images/appointment/appointment_checkbox_OK.svg")
+        center no-repeat;
+    width: 16px;
+    height: 13px;
+    z-index: 10;
+    right: 20px;
+    top: 20px;
+}
+
+.input__errorLabel {
+    position: absolute;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: #e13c3c;
+
+    left: 20px;
+    bottom: -14px;
+}
+
 .inputCustom {
     background: #ffffff;
     border: 0.5px solid rgba(48, 32, 61, 0.6);
@@ -162,12 +217,11 @@ export default ({
 
 .inputCustom:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #FEFCFF,
-                0 0 0 3px #30203D;
+    box-shadow: 0 0 0 2px #fefcff, 0 0 0 3px #30203d;
 }
 
 .inputCustom:active {
-    border: 0.5px solid #FB7A0D;
+    border: 0.5px solid #fb7a0d;
 }
 
 label {
@@ -177,15 +231,15 @@ label {
 
     color: rgba(48, 32, 61, 0.6);
 
-    cursor: pointer
+    cursor: pointer;
 }
 
-label::selection{
+label::selection {
     background-color: none;
 }
 .checkbox_custom {
-    margin-top:2px;
-    margin-right:9px;
+    margin-top: 2px;
+    margin-right: 9px;
 
     background: #feffff;
     border: 0.5px solid rgba(48, 32, 61, 0.6);
@@ -196,12 +250,12 @@ label::selection{
     cursor: pointer;
 }
 
-.checkbox_custom:active{
-    box-shadow: 0 0 0 1px #FFF,
-                0 0 0 2px #30203D;
+.checkbox_custom:active {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 2px #30203d;
 }
 
-.checkbox_bgrd{
-    background: url("./assets/images/appointment/appointment__checkboxClick.svg") center no-repeat;
+.checkbox_bgrd {
+    background: url("./assets/images/appointment/appointment__checkboxClick.svg")
+        center no-repeat;
 }
 </style>
