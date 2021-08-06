@@ -35,23 +35,21 @@
           </a>
         </div>
         <div class="subj__cards">
-          <div class="subj_cards__inner">
-            <template v-for="(item) in "> 
-            <div class="subj__card" >
+          <div class="subj_cards__inner" >
+            <div class="subj__card" v-for="(item) in courses" :key="item">
               <div class="card__header">
                 <div class="card__title">
-                  Язык программирования: Python
+                  {{item.title}}
                 </div>
                 <div class="card__logo">
                   <img
-                    src="./assets/images/subj_cards/python-logo2.svg"
+                    src="item.img"
                     alt=""
                   />
                 </div>
               </div>
               <div class="card__text">
-                Научим вас и вашего ребенка кодить на высокоуровневом языке
-                программирования. Без слез...
+                {{item.desc}}
               </div>
               <div class="card__underground">
                 <a class="buttonWrapper" href="#">
@@ -66,7 +64,6 @@
                 </a>
               </div>
             </div>
-            </template> 
           </div>
         </div>
       </div>
@@ -77,14 +74,14 @@
 export default ({
   data(){
     return{
-      showFilters: false,
+      showFilters: true,
       courses: [
-        {  name: "Python", title:"Язык программирования: Python",img: "http://example.com/", desc: "Научим вас и вашего ребенка кодить на высокоуровневом языке программирования. Без слез..." },
-        { name: "Scratch", title: "Язык программирования: Scratch",img: "http://example.com/", desc: "Детский язык программирования, похожий на конструктор Lego: программы собираются..." },
-        {  name: "C++", title:"Спортивное программирование на C++", img: "http://example.com/", desc: "Хотите стать победителем российской олимпиады по программированию?" },
-        {  name: "Web", title:"Web", img: "http://example.com/", desc: "Что скрывается за красивой оболочкой сайта? Язык гипертекстовой разметки HTML..." },
-        { name: "Informatics", title:"Элементарная информатика (взрослые)", img: "http://example.com/", desc: "Для тех, у кого нет времени на обучение. Изучайте только актуальную для вас тему: эксель..." },
-        {  name: "Figma", title:"Figma", img: "http://example.com/", desc: "Вы познакомитесь с миром веб-дизайна, освоите популярный графический редактор Figma." },
+        {  name: "Python", title:"Язык программирования: Python", img: "url(\"./assets/images/subj_cards/python-logo.svg\") center no-repeat", desc: "Научим вас и вашего ребенка кодить на высокоуровневом языке программирования. Без слез..." },
+        {  name: "Scratch", title: "Язык программирования: Scratch",img: "", desc: "Детский язык программирования, похожий на конструктор Lego: программы собираются..." },
+        {  name: "C++", title:"Спортивное программирование на C++", img: "", desc: "Хотите стать победителем российской олимпиады по программированию?" },
+        {  name: "Web", title:"Web", img: "", desc: "Что скрывается за красивой оболочкой сайта? Язык гипертекстовой разметки HTML..." },
+        {  name: "Informatics", title:"Элементарная информатика (взрослые)", img: "", desc: "Для тех, у кого нет времени на обучение. Изучайте только актуальную для вас тему: эксель..." },
+        {  name: "Figma", title:"Figma", img: "", desc: "Вы познакомитесь с миром веб-дизайна, освоите популярный графический редактор Figma." },
         ],
     }
   }
@@ -196,6 +193,14 @@ export default ({
   color: #30203d;
 }
 
+.card__logo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #4E3D95;
+
+  /* background: url("./assets/images/subj_cards/python-logo.svg") center no-repeat; */
+}
 .card__text {
   font-weight: normal;
   font-size: 16px;
@@ -208,9 +213,10 @@ export default ({
 
 .card__underground {
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
+
+  bottom: 0;
 }
 
 .card__link {
