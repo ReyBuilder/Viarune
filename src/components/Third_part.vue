@@ -41,11 +41,7 @@
                 <div class="card__title">
                   {{item.title}}
                 </div>
-                <div class="card__logo">
-                  <img
-                    src="item.img"
-                    alt=""
-                  />
+                <div class="card__logo" v-bind:style='{ backgroundImage: "url(" + item.img + ") center no-repeat", }'>
                 </div>
               </div>
               <div class="card__text">
@@ -76,7 +72,7 @@ export default ({
     return{
       showFilters: true,
       courses: [
-        {  name: "Python", title:"Язык программирования: Python", img: "url(\"./assets/images/subj_cards/python-logo.svg\") center no-repeat", desc: "Научим вас и вашего ребенка кодить на высокоуровневом языке программирования. Без слез..." },
+        {  name: "Python", title:"Язык программирования: Python", img: "./assets/images/subj_cards/python-logo.svg", desc: "Научим вас и вашего ребенка кодить на высокоуровневом языке программирования. Без слез..." },
         {  name: "Scratch", title: "Язык программирования: Scratch",img: "", desc: "Детский язык программирования, похожий на конструктор Lego: программы собираются..." },
         {  name: "C++", title:"Спортивное программирование на C++", img: "", desc: "Хотите стать победителем российской олимпиады по программированию?" },
         {  name: "Web", title:"Web", img: "", desc: "Что скрывается за красивой оболочкой сайта? Язык гипертекстовой разметки HTML..." },
