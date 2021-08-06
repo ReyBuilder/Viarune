@@ -36,7 +36,8 @@
         </div>
         <div class="subj__cards">
           <div class="subj_cards__inner">
-            <div class="subj__card">
+            <template v-for="(item) in "> 
+            <div class="subj__card" >
               <div class="card__header">
                 <div class="card__title">
                   Язык программирования: Python
@@ -65,41 +66,8 @@
                 </a>
               </div>
             </div>
-            <div class="subj__card">2</div>
-            <div class="subj__card">3</div>
-            <div class="subj__card">
-              <div class="card__header">
-                <div class="card__title">
-                  Язык программирования: Python
-                </div>
-                <div class="card__logo">
-                  <img
-                    src="./assets/images/subj_cards/python-logo2.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="card__text">
-                Научим вас и вашего ребенка кодить на высокоуровневом языке
-                программирования. Без слез...
-              </div>
-              <div class="card__underground">
-                <a class="buttonWrapper" href="#">
-                  <div class="buttonBox buttonPurple">
-                    Записаться
-                  </div>
-                </a>
-                <a class="" href="#">
-                  <div class="">
-                    Подробнее
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="subj__card">5</div>
-            <div class="subj__card">6</div>
+            </template> 
           </div>
-          <div class="subj_cards__inner"></div>
         </div>
       </div>
     </div>
@@ -110,6 +78,14 @@ export default ({
   data(){
     return{
       showFilters: false,
+      courses: [
+        {  name: "Python", title:"Язык программирования: Python",img: "http://example.com/", desc: "Научим вас и вашего ребенка кодить на высокоуровневом языке программирования. Без слез..." },
+        { name: "Scratch", title: "Язык программирования: Scratch",img: "http://example.com/", desc: "Детский язык программирования, похожий на конструктор Lego: программы собираются..." },
+        {  name: "C++", title:"Спортивное программирование на C++", img: "http://example.com/", desc: "Хотите стать победителем российской олимпиады по программированию?" },
+        {  name: "Web", title:"Web", img: "http://example.com/", desc: "Что скрывается за красивой оболочкой сайта? Язык гипертекстовой разметки HTML..." },
+        { name: "Informatics", title:"Элементарная информатика (взрослые)", img: "http://example.com/", desc: "Для тех, у кого нет времени на обучение. Изучайте только актуальную для вас тему: эксель..." },
+        {  name: "Figma", title:"Figma", img: "http://example.com/", desc: "Вы познакомитесь с миром веб-дизайна, освоите популярный графический редактор Figma." },
+        ],
     }
   }
 })
