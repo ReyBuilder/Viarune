@@ -44,12 +44,10 @@
                             <div
                                 class="card__logo"
                                 v-bind:style="{
-                                    backgroundImage:
-                                        'url(' +
-                                        item.img +
-                                        ') center no-repeat',
+                                    backgroundImage:'url(' +item.img +')',
                                 }"
-                            ></div>
+                            >
+                            </div>
                         </div>
                         <div class="card__text">
                             {{ item.desc }}
@@ -82,42 +80,42 @@ export default {
                 {
                     name: "Python",
                     title: "Язык программирования: Python",
-                    img: "./assets/images/subj_cards/python-logo.svg",
+                    img: "./courses_logos/logo_python.svg",
                     desc:
                         "Научим вас и вашего ребенка кодить на высокоуровневом языке программирования. Без слез...",
                 },
                 {
                     name: "Scratch",
                     title: "Язык программирования: Scratch",
-                    img: "",
+                    img: "./courses_logos/logo_scratch.svg",
                     desc:
                         "Детский язык программирования, похожий на конструктор Lego: программы собираются...",
                 },
                 {
                     name: "C++",
                     title: "Спортивное программирование на C++",
-                    img: "",
+                    img: "./courses_logos/logo_c++.svg",
                     desc:
                         "Хотите стать победителем российской олимпиады по программированию?",
                 },
                 {
                     name: "Web",
                     title: "Web",
-                    img: "",
+                    img: "./courses_logos/logo_web.svg",
                     desc:
                         "Что скрывается за красивой оболочкой сайта? Язык гипертекстовой разметки HTML...",
                 },
                 {
                     name: "Informatics",
                     title: "Элементарная информатика (взрослые)",
-                    img: "",
+                    img: "./courses_logos/logo_informatics.svg",
                     desc:
                         "Для тех, у кого нет времени на обучение. Изучайте только актуальную для вас тему: эксель...",
                 },
                 {
                     name: "Figma",
                     title: "Figma",
-                    img: "",
+                    img: "./courses_logos/logo_figma.svg",
                     desc:
                         "Вы познакомитесь с миром веб-дизайна, освоите популярный графический редактор Figma.",
                 },
@@ -253,6 +251,8 @@ export default {
     border-radius: 50%;
     border: 3px solid #4e3d95;
 
+    background-repeat: no-repeat;
+    background-position: center center;
     /* background: url("./assets/images/subj_cards/python-logo.svg") center no-repeat; */
 }
 .card__text {

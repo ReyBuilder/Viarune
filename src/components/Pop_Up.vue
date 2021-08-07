@@ -87,7 +87,6 @@ export default {
     position: absolute;
     display: inline-block;
     border-radius: 9px;
-    /* border:1px solid #30203D; */
     right: 31px;
     top: 17px;
     height: 42px;

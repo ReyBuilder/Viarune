@@ -18,6 +18,9 @@ import PopUp from "./components/Pop_Up.vue"
 
 export default {
   name: "App",
+  data(){
+	  return
+  },
   components: {
 	Intro,
 	About_school,
@@ -32,6 +35,6 @@ export default {
 };
 </script>
 <style>
-@import url(~@/assets/fonts/font_gilroy.css);
+@import url(~@/assets/fonts/fonts.css);
 @import url(~@/assets/BaseStyles.css);
 </style>

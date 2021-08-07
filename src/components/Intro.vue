@@ -11,7 +11,7 @@
           <a class="nav__item" href="#">Пробный урок</a>
           <a class="nav__phone" href="#">
             <div class="nav_phone__icon">
-              <img src="./assets/icons/icon_intro_call.svg" alt="" />
+              <!-- <img src="./assets/icons/icon_intro_call.svg" alt="" /> -->
             </div>
             <div class="nav_phone__number underlined">+7 912 345-67-89</div>
           </a>
@@ -187,7 +187,14 @@
   margin-left: -12px;
   text-decoration: none;
 }
-
+.nav_phone__icon{
+  height: 28px;
+  width: 28px;
+  background: url("./assets/icons/icon_intro_call.svg") center no-repeat;
+}
+.nav__phone:hover .nav_phone__icon{
+  background: url("./assets/icons/icon_intro_call_active.svg") center no-repeat;
+}
 .nav__phone:focus {
   box-shadow: 0 0 0 1px #fff
 }
@@ -208,4 +215,30 @@
   margin: 0 auto;
   max-width: 1100px;
 }
+
+/* underlined */
+.underlined {
+  position: relative;
+  color: #eee;
+}
+
+.nav__phone:hover .underlined{
+  position: relative;
+  color: #f8840d;
+  cursor: pointer;
+}
+.underlined:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  position: absolute;
+  top: 18px;
+  opacity: 1;
+}
+.nav__phone:hover .underlined:after {
+  background-color: #f8840d;
+}
+
 </style>
