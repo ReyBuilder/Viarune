@@ -7,7 +7,7 @@
             <div class="subj__title">
                 Наши предметы
             </div>
-            <div class="subj__filters" v-if="showFilters">
+            <div class="subj__filters">
                 <a class="filterWrapper" href="#">
                     <div class="buttonBoxFilter ">
                         Все
@@ -36,7 +36,7 @@
             </div>
             <div class="subj__cards">
                 <div class="subj_cards__inner">
-                    <div class="subj__card" v-for="item in courses" :key="item">
+                    <div class="subj__card" v-for="(item, index) in courses" :key="item">
                         <div class="card__header">
                             <div class="card__title">
                                 {{ item.title }}
@@ -58,7 +58,7 @@
                                     Записаться
                                 </div>
                             </a>
-                            <a class="card__link" href="#">
+                            <a class="card__link" href="#" v-on:click.prevent="$emit('click-course', index)">
                                 <div>
                                     Подробнее
                                 </div>
@@ -73,55 +73,12 @@
 
 <script>
 export default {
-    data() {
-        return {
-            showFilters: true,
-            courses: [
-                {
-                    name: "Python",
-                    title: "Язык программирования: Python",
-                    img: "./courses_logos/logo_python.svg",
-                    desc:
-                        "Научим вас и вашего ребенка кодить на высокоуровневом языке программирования. Без слез...",
-                },
-                {
-                    name: "Scratch",
-                    title: "Язык программирования: Scratch",
-                    img: "./courses_logos/logo_scratch.svg",
-                    desc:
-                        "Детский язык программирования, похожий на конструктор Lego: программы собираются...",
-                },
-                {
-                    name: "C++",
-                    title: "Спортивное программирование на C++",
-                    img: "./courses_logos/logo_c++.svg",
-                    desc:
-                        "Хотите стать победителем российской олимпиады по программированию?",
-                },
-                {
-                    name: "Web",
-                    title: "Web",
-                    img: "./courses_logos/logo_web.svg",
-                    desc:
-                        "Что скрывается за красивой оболочкой сайта? Язык гипертекстовой разметки HTML...",
-                },
-                {
-                    name: "Informatics",
-                    title: "Элементарная информатика (взрослые)",
-                    img: "./courses_logos/logo_informatics.svg",
-                    desc:
-                        "Для тех, у кого нет времени на обучение. Изучайте только актуальную для вас тему: эксель...",
-                },
-                {
-                    name: "Figma",
-                    title: "Figma",
-                    img: "./courses_logos/logo_figma.svg",
-                    desc:
-                        "Вы познакомитесь с миром веб-дизайна, освоите популярный графический редактор Figma.",
-                },
-            ],
-        };
-    },
+    props: {
+        courses:{
+            type: Array,
+            required: true,
+        },
+    }
 };
 </script>
 
@@ -253,7 +210,6 @@ export default {
 
     background-repeat: no-repeat;
     background-position: center center;
-    /* background: url("./assets/images/subj_cards/python-logo.svg") center no-repeat; */
 }
 .card__text {
     font-weight: normal;
