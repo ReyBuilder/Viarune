@@ -5,6 +5,8 @@
 		<About_subj
 			v-bind:courses="courses"
 			v-on:click-course="currentCourseIndex = $event"
+			v-bind:filters="filters"
+			v-bind:showFilters="showFilters"
 		></About_subj>
 		<Appointment></Appointment>
 		<Footer></Footer>
@@ -30,7 +32,12 @@ export default {
 		return {
 			showFilters: false,
 			currentCourseIndex: null,
-			
+			filters: [
+				"Программирование",
+				"Дизайн",
+				"Иностранные языки",
+				"Школьные предметы",
+			],
 			courses: [
 				{
 					name: "Python",
@@ -51,6 +58,9 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
+					tags: [
+						"Программирование", "Школьные предметы"
+					]
 				},
 				{
 					name: "Scratch",
@@ -71,6 +81,9 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
+					tags: [
+						"Школьные предметы", "Программирование"
+					]
 				},
 				{
 					name: "C++",
@@ -91,6 +104,9 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
+					tags: [
+						"Программирование"
+					]
 				},
 				{
 					name: "Web",
@@ -111,6 +127,9 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
+					tags: [
+						"Дизайн", "Программирование"
+					]
 				},
 				{
 					name: "Informatics",
@@ -131,6 +150,9 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
+					tags: [
+						"Школьные предметы"
+					]
 				},
 				{
 					name: "Figma",
@@ -151,6 +173,9 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
+					tags: [
+						"Дизайн"
+					]
 				},
 			],
 		};
