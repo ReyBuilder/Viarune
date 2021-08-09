@@ -25,6 +25,9 @@
 								v-model="fullname"
 								v-on:blur="validationFullName()"
 								v-on:focus="fullNameIsFocused = true"
+								v-bind:class="{
+									inputCustomError: fullNameError,
+								}"
 							/>
 							<div
 								class="input__errorLabel"
@@ -48,6 +51,9 @@
 								placeholder="+79199118950"
 								v-on:blur="validataionPhone()"
 								v-on:focus="phoneIsFocused = true"
+								v-bind:class="{
+									inputCustomError: phoneError,
+								}"
 							/>
 							<div class="input__errorLabel" v-show="phoneError">
 								Неверный формат. Введите только цифры.
@@ -68,6 +74,9 @@
 								placeholder="Astronaut@gmail.com"
 								v-on:blur="validataionEmail()"
 								v-on:focus="emailIsFocused = true"
+								v-bind:class="{
+									inputCustomError: emailError,
+								}"
 							/>
 							<div class="input__errorLabel" v-show="emailError">
 								Неверный формат. Введите корректный email.
@@ -115,19 +124,47 @@ export default {
 			this.emailError = !this.email.match(/^\S*@\S*$/);
 		},
 	},
-	data() {
-		return {
-			checkBoxChecked: false,
-			fullNameError: false,
-			phoneError: false,
-			emailError: false,
-			fullname: "",
-			phone: "",
-			email: "",
-			fullNameIsFocused: true,
-			phoneIsFocused: true,
-			emailIsFocused: true,
-		};
+	props: {
+		checkBoxChecked: {
+			type: Boolean,
+			required: true,
+		},
+		fullNameError: {
+			type: Boolean,
+			required: true,
+		},
+		phoneError: {
+			type: Boolean,
+			required: true,
+		},
+		emailError: {
+			type: Boolean,
+			required: true,
+		},
+		fullname: {
+			type: String,
+			required: true,
+		},
+		phone: {
+			type: String,
+			required: true,
+		},
+		email: {
+			type: String,
+			required: true,
+		},
+		fullNameIsFocused: {
+			type: Boolean,
+			required: true,
+		},
+		phoneIsFocused: {
+			type: Boolean,
+			required: true,
+		},
+		emailIsFocused: {
+			type: Boolean,
+			required: true,
+		},
 	},
 };
 </script>
@@ -239,9 +276,8 @@ export default {
 .inputCustom {
 	background: #ffffff;
 	border: 0.5px solid rgba(48, 32, 61, 0.6);
-	box-sizing: border-box;
 	border-radius: 30px;
-
+	box-sizing: border-box;
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 16px;
@@ -250,6 +286,11 @@ export default {
 
 	width: 100%;
 	max-width: 338px;
+}
+
+.inputCustomError {
+	border-color: #e13c3c;
+	color: #e13c3c;
 }
 
 .inputCustom:focus {

@@ -9,7 +9,18 @@
 				v-bind:filters="filters"
 				v-bind:showFilters="showFilters"
 			></About_subj>
-			<Appointment></Appointment>
+			<Appointment 
+			v-bind:checkBoxChecked="checkBoxChecked"
+			v-bind:fullNameError="fullNameError"
+			v-bind:phoneError="phoneError"
+			v-bind:emailError="emailError"
+			v-bind:fullname="fullname"
+			v-bind:phone="phone"
+			v-bind:email="email"
+			v-bind:fullNameIsFocused="fullNameIsFocused"
+			v-bind:phoneIsFocused="phoneIsFocused"
+			v-bind:emailIsFocused="emailIsFocused"
+			></Appointment>
 			<Footer></Footer>
 			<PopUp
 				v-bind:course="coursePopUp"
@@ -28,7 +39,7 @@ import About_subj from "./components/Third_part.vue";
 import Appointment from "./components/Fourth_part.vue";
 import Footer from "./components/Footer.vue";
 import PopUp from "./components/Pop_Up.vue";
-import MobileIntro from "./components/Mobile_Intro.vue"
+import MobileIntro from "./components/Mobile_Intro.vue";
 
 export default {
 	name: "App",
@@ -39,9 +50,20 @@ export default {
 	},
 	data() {
 		return {
-			isMobile: false,
 			showFilters: true,
 			currentCourseIndex: null,
+
+			checkBoxChecked: false,
+			fullNameError: false,
+			phoneError: false,
+			emailError: false,
+			fullname:"",
+			phone: "",
+			email: "",
+			fullNameIsFocused: true,
+			phoneIsFocused: true,
+			emailIsFocused: true,
+
 			filters: [
 				"Программирование",
 				"Дизайн",
@@ -157,7 +179,7 @@ export default {
 	.mobile_type {
 		display: block;
 	}
-	.desktop_type{
+	.desktop_type {
 		display: none;
 	}
 }
@@ -165,9 +187,8 @@ export default {
 	.mobile_type {
 		display: none;
 	}
-	.desktop_type{
+	.desktop_type {
 		display: block;
 	}
 }
-
 </style>

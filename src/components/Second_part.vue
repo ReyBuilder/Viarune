@@ -41,7 +41,7 @@
               Занятие с опытным преподавателем.
             </div>
           </div>
-          <a class="buttonWrapper" href="#desktop_about_subjs" v-smooth-scroll>
+          <a class="buttonWrapper" href="#desktop_about_subjs" v-smooth-scroll="{ duration: 2000, offset: -50 }">
             <div class="buttonBox buttonOrange">
               Перейти к предметам
             </div>

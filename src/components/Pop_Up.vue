@@ -1,5 +1,9 @@
 <template>
-	<div class="popUp__main" v-if="course" v-on:click.prevent="checkClick($event)">
+	<div
+		class="popUp__main"
+		v-if="course"
+		v-on:click.prevent="checkClick($event)"
+	>
 		<div class="popUp__container">
 			<a
 				class="popUp_close__wrapper"
@@ -33,7 +37,12 @@
 					</div>
 				</div>
 			</div>
-			<a class="popUp__button" href="#">
+			<a
+				class="popUp__button"
+				v-on:click.prevent="$emit('close-popup')"
+				href="#desktop_appointment"
+				v-smooth-scroll="{ duration: 2000, offset: -50 }"
+			>
 				<div class="popUp__buttonBox">
 					Записаться
 				</div>

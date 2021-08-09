@@ -50,7 +50,7 @@
 							{{ item.desc }}
 						</div>
 						<div class="card__underground">
-							<a class="card__button" href="#desktop_appointment">
+							<a class="card__button" href="#desktop_appointment" v-smooth-scroll="{ duration: 2000, offset: -50 }">
 								<div class="buttonBox">
 									Записаться
 								</div>
@@ -195,7 +195,6 @@ export default {
 .subj_cards__inner {
 	display: flex;
 	position: relative;
-	/* justify-content: space-between; */
 	flex-wrap: wrap;
 }
 /* Card */
