@@ -41,7 +41,7 @@
               Занятие с опытным преподавателем.
             </div>
           </div>
-          <a class="buttonWrapper" href="#desktop_about_subjs">
+          <a class="buttonWrapper" href="#desktop_about_subjs" v-smooth-scroll>
             <div class="buttonBox buttonOrange">
               Перейти к предметам
             </div>

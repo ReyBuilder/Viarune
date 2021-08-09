@@ -9,9 +9,9 @@
 							alt="Logo"
 						/>
 					</div>
-					<a class="nav__item" href="#desktop_about_school">О школе</a>
-					<a class="nav__item" href="#desktop_about_subjs">Предметы</a>
-					<a class="nav__item" href="#desktop_appointment">Пробный урок</a>
+					<a class="nav__item" href="#desktop_about_school" v-smooth-scroll="{ duration: 2000, offset: 0 }">О школе</a>
+					<a class="nav__item" href="#desktop_about_subjs" v-smooth-scroll="{ duration: 2000, offset: 0 }">Предметы</a>
+					<a class="nav__item" href="#desktop_appointment" v-smooth-scroll="{ duration: 2000, offset: -50 }">Пробный урок</a>
 					<a class="nav__phone" href="tel:+79199118950">
 						<div class="nav_phone__icon">
 							<!-- <img src="./assets/icons/icon_intro_call.svg" alt="" /> -->
@@ -37,7 +37,7 @@
 								Мы работаем чтобы сделать образование
 								комфортным, доступным и качественным.
 							</div>
-							<a class="buttonWrapper" href="#desktop_about_subjs">
+							<a class="buttonWrapper" href="#desktop_about_subjs" v-smooth-scroll>
 								<div class="buttonBox buttonOrange">
 									Подобрать курс
 								</div>
