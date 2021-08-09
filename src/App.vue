@@ -1,16 +1,24 @@
 <template>
 	<div>
-		<Intro></Intro>
-		<About_school></About_school>
-		<About_subj
-			v-bind:courses="courses"
-			v-on:click-course="currentCourseIndex = $event"
-			v-bind:filters="filters"
-			v-bind:showFilters="showFilters"
-		></About_subj>
-		<Appointment></Appointment>
-		<Footer></Footer>
-		<PopUp v-bind:course="coursePopUp" v-on:close-popup="currentCourseIndex = null"></PopUp>
+		<template v-if="!isMobile">
+			<Intro></Intro>
+			<About_school></About_school>
+			<About_subj
+				v-bind:courses="courses"
+				v-on:click-course="currentCourseIndex = $event"
+				v-bind:filters="filters"
+				v-bind:showFilters="showFilters"
+			></About_subj>
+			<Appointment></Appointment>
+			<Footer></Footer>
+			<PopUp
+				v-bind:course="coursePopUp"
+				v-on:close-popup="currentCourseIndex = null"
+			></PopUp>
+		</template>
+		<template>
+			<MobileIntro></MobileIntro>
+		</template>
 	</div>
 </template>
 <script>
@@ -20,6 +28,7 @@ import About_subj from "./components/Third_part.vue";
 import Appointment from "./components/Fourth_part.vue";
 import Footer from "./components/Footer.vue";
 import PopUp from "./components/Pop_Up.vue";
+import MobileIntro from "./components/Mobile_Intro.vue"
 
 export default {
 	name: "App",
@@ -30,7 +39,8 @@ export default {
 	},
 	data() {
 		return {
-			showFilters: false,
+			isMobile: true,
+			showFilters: true,
 			currentCourseIndex: null,
 			filters: [
 				"Программирование",
@@ -58,9 +68,7 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
-					tags: [
-						"Программирование", "Школьные предметы"
-					]
+					tags: ["Программирование", "Школьные предметы"],
 				},
 				{
 					name: "Scratch",
@@ -81,9 +89,7 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
-					tags: [
-						"Школьные предметы", "Программирование"
-					]
+					tags: ["Школьные предметы", "Программирование"],
 				},
 				{
 					name: "C++",
@@ -104,9 +110,7 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
-					tags: [
-						"Программирование"
-					]
+					tags: ["Программирование"],
 				},
 				{
 					name: "Web",
@@ -127,9 +131,7 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
-					tags: [
-						"Дизайн", "Программирование"
-					]
+					tags: ["Дизайн", "Программирование"],
 				},
 				{
 					name: "Informatics",
@@ -150,9 +152,7 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
-					tags: [
-						"Школьные предметы"
-					]
+					tags: ["Школьные предметы"],
 				},
 				{
 					name: "Figma",
@@ -173,9 +173,7 @@ export default {
 						{ number: 231, text: "Тем для изучения" },
 						{ number: 520, text: "Довольных учеников" },
 					],
-					tags: [
-						"Дизайн"
-					]
+					tags: ["Дизайн"],
 				},
 			],
 		};
@@ -187,6 +185,7 @@ export default {
 		Appointment,
 		Footer,
 		PopUp,
+		MobileIntro,
 	},
 	created() {
 		document.title = "Viarune study";
