@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<template v-if="!isMobile">
+		<div class="desktop_type">
 			<Intro></Intro>
 			<About_school></About_school>
 			<About_subj
@@ -15,10 +15,10 @@
 				v-bind:course="coursePopUp"
 				v-on:close-popup="currentCourseIndex = null"
 			></PopUp>
-		</template>
-		<template>
+		</div>
+		<div class="mobile_type">
 			<MobileIntro></MobileIntro>
-		</template>
+		</div>
 	</div>
 </template>
 <script>
@@ -39,7 +39,7 @@ export default {
 	},
 	data() {
 		return {
-			isMobile: true,
+			isMobile: false,
 			showFilters: true,
 			currentCourseIndex: null,
 			filters: [
@@ -195,4 +195,21 @@ export default {
 <style>
 @import url(~@/assets/fonts/fonts.css);
 @import url(~@/assets/BaseStyles.css);
+@media screen and (max-width: 1124px) {
+	.mobile_type {
+		display: block;
+	}
+	.desktop_type{
+		display: none;
+	}
+}
+@media screen and (min-width: 1123px) {
+	.mobile_type {
+		display: none;
+	}
+	.desktop_type{
+		display: block;
+	}
+}
+
 </style>

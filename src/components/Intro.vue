@@ -9,15 +9,15 @@
 							alt="Logo"
 						/>
 					</div>
-					<a class="nav__item" href="#about_school">О школе</a>
-					<a class="nav__item" href="#">Предметы</a>
-					<a class="nav__item" href="#">Пробный урок</a>
-					<a class="nav__phone" href="#">
+					<a class="nav__item" href="#desktop_about_school">О школе</a>
+					<a class="nav__item" href="#desktop_about_subjs">Предметы</a>
+					<a class="nav__item" href="#desktop_appointment">Пробный урок</a>
+					<a class="nav__phone" href="tel:+79199118950">
 						<div class="nav_phone__icon">
 							<!-- <img src="./assets/icons/icon_intro_call.svg" alt="" /> -->
 						</div>
 						<div class="nav_phone__number underlined">
-							+7 912 345-67-89
+							+7 919 911-89-50
 						</div>
 					</a>
 				</nav>
@@ -37,7 +37,7 @@
 								Мы работаем чтобы сделать образование
 								комфортным, доступным и качественным.
 							</div>
-							<a class="buttonWrapper" href="#">
+							<a class="buttonWrapper" href="#desktop_about_subjs">
 								<div class="buttonBox buttonOrange">
 									Подобрать курс
 								</div>

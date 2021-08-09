@@ -1,7 +1,7 @@
 <template>
   <div class="about__school" name="about_school">
     <div class="about_school__inner">
-      <div class="about_school__title">
+      <div class="about_school__title" id="desktop_about_school">
         О школе
       </div>
       <div class="about_school__content">
@@ -41,7 +41,7 @@
               Занятие с опытным преподавателем.
             </div>
           </div>
-          <a class="buttonWrapper" href="#">
+          <a class="buttonWrapper" href="#desktop_about_subjs">
             <div class="buttonBox buttonOrange">
               Перейти к предметам
             </div>

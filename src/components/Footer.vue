@@ -13,10 +13,10 @@
                         <a class="icon__wrapper" href="#">
                             <div class="iconBox" id="vk"></div>
                         </a>
-                        <a class="icon__wrapper" href="#">
+                        <a class="icon__wrapper" href="https://www.facebook.com/groups/352779019914924/about">
                             <div class="iconBox" id="fb"></div>
                         </a>
-                        <a class="icon__wrapper" href="#">
+                        <a class="icon__wrapper" href="https://www.instagram.com/viarunestudy/">
                             <div class="iconBox" id="inst"></div>
                         </a>
                     </div>
@@ -30,7 +30,7 @@
                             <img src="./assets/icons/icon_call.svg" alt="" />
                         </div>
                         <div class="phone__digits">
-                            +7 912 345-67-89
+                            +7 919 911-89-50
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <a class="icon__wrapper" href="#">
                             <div class="iconBox" id="tg"></div>
                         </a>
-                        <a class="icon__wrapper" href="#">
+                        <a class="icon__wrapper" href="https://wa.me/79120133997">
                             <div class="iconBox" id="ws"></div>
                         </a>
                         <a class="icon__wrapper" href="#">
@@ -51,27 +51,18 @@
                     Документы
                 </div>
                 <div class="link__wrapper">
-                    <a class="underlined__item" href="#"
-                        >Политика конфиденциальности</a
-                    >
-                </div>
-                <div class="link__wrapper">
-                    <a class="underlined__item" href="#"
-                        >Обработка персональных данных</a
-                    >
-                </div>
-                <div class="link__wrapper">
-                    <a class="underlined__item" href="#">Договор-оферта</a>
+                    <a class="underlined__item" href="./Dogovor-oferta.docx">Договор-оферта</a>
                 </div>
                 <div class="company__info">
-                    ООО "Онлайн-школа Virion" <br />
-                    ОГРН: 54646512146512
+                    ИП "Семакин Александр Александрович" <br />
+                    ОГРН 321183200030713 <br>
+                    ИНН 182907717333
                 </div>
             </div>
         </div>
     </div>
 </template>
-<style>
+<style scoped>
 .footer__container {
     width: 100%;
     max-width: 1001px;
@@ -80,7 +71,7 @@
 
 .footer__main {
     padding-top: 77px;
-    padding-bottom: 77px;
+    padding-bottom: 57px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -256,7 +247,7 @@
 }
 
 .company__info {
-    margin-top: 26px;
+    margin-top: 85px;
     line-height: 19px;
     height: 38px;
 }

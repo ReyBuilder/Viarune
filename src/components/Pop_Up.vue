@@ -57,7 +57,7 @@ export default {
 	},
 };
 </script>
-<style>
+<style scoped>
 .popUp__main {
 	display: flex;
 	background: rgba(62, 58, 68, 0.52);

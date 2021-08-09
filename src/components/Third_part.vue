@@ -1,10 +1,10 @@
 <template>
 	<div class="our_subjects">
 		<div class="leftBg">
-			<img src="./assets/images/rudiment.svg" alt="" />
+			<img src="./assets/images/rudiment.svg" alt="rudiment" />
 		</div>
 		<div class="subj__container">
-			<div class="subj__title">
+			<div class="subj__title" id="desktop_about_subjs">
 				Наши предметы
 			</div>
 			<div class="subj__filters" v-show="showFilters">
@@ -50,7 +50,7 @@
 							{{ item.desc }}
 						</div>
 						<div class="card__underground">
-							<a class="card__button" href="#">
+							<a class="card__button" href="#desktop_appointment">
 								<div class="buttonBox">
 									Записаться
 								</div>
