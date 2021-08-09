@@ -90,10 +90,10 @@ export default {
 			type: Array,
 			required: true,
 		},
-        showFilters:{
-            type: Boolean,
-            required: true,
-        }
+		showFilters: {
+			type: Boolean,
+			required: true,
+		},
 	},
 	computed: {
 		filteredCourses() {
@@ -104,8 +104,7 @@ export default {
 						tmp.push(t);
 				});
 				return tmp;
-			} else 
-            return this.courses;
+			} else return this.courses;
 		},
 	},
 };
@@ -196,7 +195,7 @@ export default {
 .subj_cards__inner {
 	display: flex;
 	position: relative;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	flex-wrap: wrap;
 }
 /* Card */
@@ -208,6 +207,10 @@ export default {
 	border-radius: 6px;
 	padding: 20px 20px 30px;
 	margin-bottom: 20px;
+}
+
+.subj__card:nth-child(3n-1) {
+	margin: 0 20px 20px;
 }
 
 .card__header {
