@@ -17,12 +17,14 @@
 						<div class="input__wrapper">
 							<div
 								class="input__checkMark"
-								v-show="!fullNameError && isActive"
+								v-show="!fullNameError && !fullNameIsFocused"
 							></div>
 							<input
 								class="inputCustom"
 								placeholder="Константин Константинопольский"
 								v-model="fullname"
+								v-on:blur="validationFullName()"
+								v-on:focus="fullNameIsFocused = true"
 							/>
 							<div
 								class="input__errorLabel"
@@ -35,16 +37,19 @@
 					<div class="form__item">
 						<!-- Телефонька -->
 						<div class="input__wrapper">
-							<div class="input__checkMark"
-							v-show="!phoneError && isActive"></div>
+							<div
+								class="input__checkMark"
+								v-show="!phoneError && !phoneIsFocused"
+							></div>
 							<input
 								v-model="phone"
 								class="inputCustom"
 								type="tel"
 								placeholder="+79199118950"
+								v-on:blur="validataionPhone()"
+								v-on:focus="phoneIsFocused = true"
 							/>
-							<div class="input__errorLabel"
-							v-show="phoneError">
+							<div class="input__errorLabel" v-show="phoneError">
 								Неверный формат. Введите только цифры.
 							</div>
 						</div>
@@ -52,16 +57,20 @@
 					<div class="form__item">
 						<!-- Почта -->
 						<div class="input__wrapper">
-							<div class="input__checkMark"
-							v-show="!emailError && isActive"></div>
+							<div
+								class="input__checkMark"
+								v-show="!emailError && !emailIsFocused"
+							></div>
 							<input
+								v-model="email"
 								class="inputCustom"
 								type="email"
 								placeholder="Astronaut@gmail.com"
+								v-on:blur="validataionEmail()"
+								v-on:focus="emailIsFocused = true"
 							/>
-							<div class="input__errorLabel"
-							v-show="emailError">
-								Неверный формат. Введите только цифры.
+							<div class="input__errorLabel" v-show="emailError">
+								Неверный формат. Введите корректный email.
 							</div>
 						</div>
 					</div>
@@ -92,7 +101,19 @@
 <script>
 export default {
 	methods: {
-		validate() {},
+		validataion() {},
+		validationFullName() {
+			this.fullNameIsFocused = false;
+			this.fullNameError = !this.fullname.match(/^\S+(\s\S+)*$/);
+		},
+		validataionPhone() {
+			this.phoneIsFocused = false;
+			this.phoneError = !this.phone.match(/^\+\d{4,}$/);
+		},
+		validataionEmail() {
+			this.emailIsFocused = false;
+			this.emailError = !this.email.match(/^\S*@\S*$/);
+		},
 	},
 	data() {
 		return {
@@ -103,7 +124,9 @@ export default {
 			fullname: "",
 			phone: "",
 			email: "",
-			isActive:false,
+			fullNameIsFocused: true,
+			phoneIsFocused: true,
+			emailIsFocused: true,
 		};
 	},
 };
