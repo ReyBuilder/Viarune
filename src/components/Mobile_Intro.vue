@@ -24,7 +24,7 @@
 					Мы работаем, чтобы сделать образование комфортным, доступным
 					и качественным.
 				</div>
-				<a class="intro__button" href="#">
+				<a class="intro__button" href="#mobile_about_subjs" v-smooth-scroll="{ duration: 2000, offset: -50 }">
 					Подобрать курс
 				</a>
 			</div>

@@ -21,7 +21,7 @@
 							></div>
 							<input
 								class="inputCustom"
-								placeholder="Константин Константинопольский"
+								placeholder="Фамилия Имя"
 								v-model="fullname"
 								v-on:blur="validationFullName()"
 								v-on:focus="fullNameIsFocused = true"
@@ -48,7 +48,7 @@
 								v-model="phone"
 								class="inputCustom"
 								type="tel"
-								placeholder="+79199118950"
+								placeholder="Телефон"
 								v-on:blur="validataionPhone()"
 								v-on:focus="phoneIsFocused = true"
 								v-bind:class="{
@@ -71,7 +71,7 @@
 								v-model="email"
 								class="inputCustom"
 								type="email"
-								placeholder="Astronaut@gmail.com"
+								placeholder="Email"
 								v-on:blur="validataionEmail()"
 								v-on:focus="emailIsFocused = true"
 								v-bind:class="{

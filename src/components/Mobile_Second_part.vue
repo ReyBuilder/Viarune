@@ -53,7 +53,7 @@
 			</div>
 			<a
 				class="button"
-				href="#"
+				href="#mobile_about_subjs"
 				v-smooth-scroll="{ duration: 2000, offset: -50 }"
 			>
 				Перейти к предметам
@@ -101,9 +101,9 @@
 }
 
 .button {
-    margin-top:27px;
+	margin-top: 27px;
 	padding-top: 18px;
-    padding-bottom: 18px;
+	padding-bottom: 18px;
 	text-decoration: none;
 	text-align: center;
 	display: block;
