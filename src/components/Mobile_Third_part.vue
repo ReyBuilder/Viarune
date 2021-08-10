@@ -119,8 +119,8 @@ export default {
 .m_subj__filters {
 	display: flex;
 	text-align: center;
-	margin-left: 38px;
-	margin-right: 35px;
+	margin-left: 31px;
+	margin-right: 28px;
 	flex-wrap: wrap;
 }
 
