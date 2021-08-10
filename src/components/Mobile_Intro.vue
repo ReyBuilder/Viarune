@@ -52,10 +52,10 @@
 
 .m_intro__content {
 	/* margin-top: 125px; */
-	margin: 0 auto;
+	margin: 0 37px;
 	text-align: center;
-	width: 100%;
-	max-width: 300px;
+	/* width: 100%; */
+	/* max-width: 300px; */
 }
 
 .m_intro__logo {

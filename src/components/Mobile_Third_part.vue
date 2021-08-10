@@ -25,7 +25,7 @@
 			<div class="subj_cards__inner">
 				<div
 					class="subj__card"
-					v-for="(item, index) in filteredCourses"
+					v-for="(item, index) in showedCourses"
 					:key="item"
 				>
 					<div class="card__header">
@@ -63,9 +63,15 @@
 						</a>
 					</div>
 				</div>
+				<div class="spacer" v-for="i in spacerCount" :key="i"></div>
 			</div>
 		</div>
-		<a class="button_showMore" href="#">
+		<a
+			class="button_showMore"
+			href="#"
+			v-on:click.prevent="showMore=!showMore"
+			v-if="(filteredCourses.length>4) && !showMore"
+		>
 			Показать еще
 		</a>
 	</div>
@@ -75,6 +81,7 @@ export default {
 	data() {
 		return {
 			currentFilter: null,
+			showMore: false,
 		};
 	},
 	props: {
@@ -101,6 +108,19 @@ export default {
 				});
 				return tmp;
 			} else return this.courses;
+		},
+		spacerCount() {
+			return 3 - (this.courses.length % 3);
+		},
+		showedCourses() {
+			const courses=this.filteredCourses;
+			if (!this.showMore){
+				const tmp = [];
+				for (let i=0; i<4; i++)
+					tmp.push(courses[i]);
+				return tmp;
+			}
+			return courses;
 		},
 	},
 };
@@ -174,15 +194,18 @@ export default {
 	justify-content: center;
 	margin-top: 27px;
 }
+
 /* Card */
 .subj__card {
-	/* flex: 30%; */
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+
 	max-width: 300px;
 	background: #ffffff;
 	box-shadow: 4px 4px 20px rgba(48, 32, 61, 0.1);
 	border-radius: 6px;
 	padding: 20px 20px 30px;
-	margin-bottom: 20px;
 }
 
 .card__header {
@@ -292,5 +315,19 @@ export default {
 	line-height: 19px;
 
 	color: #ffffff;
+}
+
+@media screen and (max-width: 959px) {
+	.spacer {
+		display: none;
+	}
+}
+.spacer {
+	width: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+
+	max-width: 300px;
 }
 </style>
