@@ -9,17 +9,17 @@
 				v-bind:filters="filters"
 				v-bind:showFilters="showFilters"
 			></About_subj>
-			<Appointment 
-			v-bind:checkBoxChecked="checkBoxChecked"
-			v-bind:fullNameError="fullNameError"
-			v-bind:phoneError="phoneError"
-			v-bind:emailError="emailError"
-			v-bind:fullname="fullname"
-			v-bind:phone="phone"
-			v-bind:email="email"
-			v-bind:fullNameIsFocused="fullNameIsFocused"
-			v-bind:phoneIsFocused="phoneIsFocused"
-			v-bind:emailIsFocused="emailIsFocused"
+			<Appointment
+				v-bind:checkBoxChecked="checkBoxChecked"
+				v-bind:fullNameError="fullNameError"
+				v-bind:phoneError="phoneError"
+				v-bind:emailError="emailError"
+				v-bind:fullname="fullname"
+				v-bind:phone="phone"
+				v-bind:email="email"
+				v-bind:fullNameIsFocused="fullNameIsFocused"
+				v-bind:phoneIsFocused="phoneIsFocused"
+				v-bind:emailIsFocused="emailIsFocused"
 			></Appointment>
 			<Footer></Footer>
 			<PopUp
@@ -30,6 +30,12 @@
 		<div class="mobile_type">
 			<MobileIntro></MobileIntro>
 			<Mobile_about_school></Mobile_about_school>
+			<Mobile_about_subj
+				v-bind:courses="courses"
+				v-on:click-course="currentCourseIndex = $event"
+				v-bind:filters="filters"
+				v-bind:showFilters="showFilters"
+			></Mobile_about_subj>
 		</div>
 	</div>
 </template>
@@ -41,7 +47,8 @@ import Appointment from "./components/Fourth_part.vue";
 import Footer from "./components/Footer.vue";
 import PopUp from "./components/Pop_Up.vue";
 import MobileIntro from "./components/Mobile_Intro.vue";
-import Mobile_about_school from "./components/Mobile_Second_part.vue"
+import Mobile_about_school from "./components/Mobile_Second_part.vue";
+import Mobile_about_subj from "./components/Mobile_Third_part.vue";
 
 export default {
 	name: "App",
@@ -59,7 +66,7 @@ export default {
 			fullNameError: false,
 			phoneError: false,
 			emailError: false,
-			fullname:"",
+			fullname: "",
 			phone: "",
 			email: "",
 			fullNameIsFocused: true,
@@ -169,6 +176,7 @@ export default {
 		PopUp,
 		MobileIntro,
 		Mobile_about_school,
+		Mobile_about_subj,
 	},
 	created() {
 		document.title = "Viarune study";
