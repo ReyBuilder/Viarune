@@ -73,7 +73,6 @@
 }
 .about_school__infoblock {
 	width: 100%;
-	/* max-width: 660px; */
 
 	background: #ffffff;
 
@@ -102,7 +101,8 @@
 }
 
 .button {
-	padding: 18px 65px;
+	padding-top: 18px;
+    padding-bottom: 18px;
 	text-decoration: none;
 	text-align: center;
 	display: block;
