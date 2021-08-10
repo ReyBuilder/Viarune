@@ -74,7 +74,6 @@ export default {
 	text-align: center;
 	margin-left: 38px;
 	margin-right: 35px;
-	padding: 7px;
 	flex-wrap: wrap;
 	
 }
