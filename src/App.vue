@@ -29,6 +29,7 @@
 		</div>
 		<div class="mobile_type">
 			<MobileIntro></MobileIntro>
+			<Mobile_about_school></Mobile_about_school>
 		</div>
 	</div>
 </template>
@@ -40,6 +41,7 @@ import Appointment from "./components/Fourth_part.vue";
 import Footer from "./components/Footer.vue";
 import PopUp from "./components/Pop_Up.vue";
 import MobileIntro from "./components/Mobile_Intro.vue";
+import Mobile_about_school from "./components/Mobile_Second_part.vue"
 
 export default {
 	name: "App",
@@ -166,6 +168,7 @@ export default {
 		Footer,
 		PopUp,
 		MobileIntro,
+		Mobile_about_school,
 	},
 	created() {
 		document.title = "Viarune study";
