@@ -68,21 +68,15 @@ export default {
 	color: #30203d;
 }
 
-.container {
-	text-align: center;
-	position: relative;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 300px;
-}
-
 /*  Фильтры */
 .m_subj__filters {
 	display: flex;
-	margin: 0 auto;
+	text-align: center;
+	margin-left: 38px;
+	margin-right: 35px;
 	padding: 7px;
 	flex-wrap: wrap;
-	max-width: 300px;
+	
 }
 
 .button__filter {
@@ -105,7 +99,9 @@ export default {
 	display: block;
 	border-radius: 50px;
 
-	padding: 13px 15px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	min-width: 101px;
 	max-width: 186px;
 }
 
