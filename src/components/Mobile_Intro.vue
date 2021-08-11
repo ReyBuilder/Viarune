@@ -7,7 +7,7 @@
 			<div class="m_intro__content">
 				<div class="m_intro__logo">
 					<img
-						src="./assets/Mobile/intro/m_intro_logo.svg"
+						src="./assets/Mobile/intro/m_intro_logo2.svg"
 						alt="m_intro_logo"
 					/>
 				</div>

@@ -5,7 +5,7 @@
 				<nav class="nav">
 					<div class="nav__item">
 						<img
-							src="./assets/images/intro/Header_logo.svg"
+							src="./assets/images/intro/Header_logo2.svg"
 							alt="Logo"
 						/>
 					</div>

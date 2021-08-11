@@ -67,30 +67,30 @@ export default {
 </script>
 <style scoped>
 .popUp__main {
-	display: flex;
 	background: rgba(62, 58, 68, 0.52);
 	position: fixed;
 	z-index: 1000;
 	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
+	padding: 0 17px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+	height: 100%;
+    /* min-height: 100vh; */
+	overflow: auto;
 }
 
 .popUp__container {
-	align-items: center;
-	justify-content: center;
-
 	position: relative;
+	overflow: auto;
+	height: 100%;
 
 	width: 100%;
-	max-width: 660px;
-	margin: auto;
 	background: #ffffff;
 	box-shadow: 4px 4px 20px rgba(48, 32, 61, 0.1);
 	border-radius: 6px;
 
-	padding: 29px 40px 40px;
+	padding: 28px 20px 40px;
 
 	line-height: 150%;
 	font-weight: 500;
@@ -141,6 +141,7 @@ export default {
 .popUp__title {
 	font-size: 18px;
 	margin-bottom: 23px;
+    margin-right: 80px;
 }
 
 .subtitle__label {
@@ -154,19 +155,27 @@ export default {
 }
 
 .popUp__container li {
-	/* background: inear-gradient(141.18deg, #4E3D95 -8.71%, #413373 104.75%);
-    background: yellow; */
 	margin-bottom: 4px;
 }
-
+.popUp__container ul {
+	margin-left: 0;
+}
 .popUp__statistics {
 	display: flex;
+	flex-wrap: wrap;
 	position: relative;
 	justify-content: space-between;
 	text-align: center;
 
 	margin-top: 19px;
 	margin-bottom: 34px;
+}
+.popUp_stat__item {
+	flex: 50%;
+}
+
+.popUp_stat__item:nth-child(n+3){
+    margin-top: 20px;
 }
 
 .stat_item__circle {
@@ -185,10 +194,10 @@ export default {
 }
 
 .popUp__button {
-	margin-left: 345px;
+	margin: 0 auto;
 	text-decoration: none;
 	border-radius: 40px;
-	display: inline-block;
+    display: block;
 }
 
 .popUp__button:focus {
@@ -202,13 +211,11 @@ export default {
 	border-radius: 40px;
 	text-align: center;
 	width: 100%;
-	max-width: 235px;
 
 	cursor: pointer;
 	margin: 0;
 	border: none;
 
-	display: inline-block;
 	vertical-align: top;
 }
 

@@ -5,7 +5,7 @@
 			<About_school></About_school>
 			<About_subj
 				v-bind:courses="courses"
-				v-on:click-course="currentCourseIndex = $event"
+				v-on:click-course="clickCourse"
 				v-bind:filters="filters"
 				v-bind:showFilters="showFilters"
 			></About_subj>
@@ -24,7 +24,7 @@
 			<Footer></Footer>
 			<PopUp
 				v-bind:course="coursePopUp"
-				v-on:close-popup="currentCourseIndex = null"
+				v-on:close-popup="closePopup"
 			></PopUp>
 		</div>
 		<div class="mobile_type">
@@ -32,10 +32,27 @@
 			<Mobile_about_school></Mobile_about_school>
 			<Mobile_about_subj
 				v-bind:courses="courses"
-				v-on:click-course="currentCourseIndex = $event"
+				v-on:click-course="clickCourse"
 				v-bind:filters="filters"
 				v-bind:showFilters="showFilters"
 			></Mobile_about_subj>
+			<Mobile_appointment
+				v-bind:checkBoxChecked="checkBoxChecked"
+				v-bind:fullNameError="fullNameError"
+				v-bind:phoneError="phoneError"
+				v-bind:emailError="emailError"
+				v-bind:fullname="fullname"
+				v-bind:phone="phone"
+				v-bind:email="email"
+				v-bind:fullNameIsFocused="fullNameIsFocused"
+				v-bind:phoneIsFocused="phoneIsFocused"
+				v-bind:emailIsFocused="emailIsFocused"
+			></Mobile_appointment>
+			<Footer></Footer>
+			<Mobile_PopUp
+				v-bind:course="coursePopUp"
+				v-on:close-popup="closePopup"
+			></Mobile_PopUp>
 		</div>
 	</div>
 </template>
@@ -49,9 +66,21 @@ import PopUp from "./components/Pop_Up.vue";
 import MobileIntro from "./components/Mobile_Intro.vue";
 import Mobile_about_school from "./components/Mobile_Second_part.vue";
 import Mobile_about_subj from "./components/Mobile_Third_part.vue";
+import Mobile_appointment from "./components/Mobile_Fourth_part.vue";
+import Mobile_PopUp from "./components/Mobile_PopUp.vue";
 
 export default {
 	name: "App",
+    methods:{
+        clickCourse(event){
+            this.currentCourseIndex = event;
+            document.body.classList.add('block_scroll');
+        },
+        closePopup(){
+            this.currentCourseIndex = null;
+            document.body.classList.remove('block_scroll');
+        },
+    },
 	computed: {
 		coursePopUp() {
 			return this.courses[this.currentCourseIndex];
@@ -59,7 +88,7 @@ export default {
 	},
 	data() {
 		return {
-			showFilters: true,
+			showFilters: false,
 			currentCourseIndex: null,
 
 			checkBoxChecked: false,
@@ -177,6 +206,8 @@ export default {
 		MobileIntro,
 		Mobile_about_school,
 		Mobile_about_subj,
+		Mobile_appointment,
+		Mobile_PopUp,
 	},
 	created() {
 		document.title = "Viarune study";
@@ -201,5 +232,8 @@ export default {
 	.desktop_type {
 		display: block;
 	}
+}
+.block_scroll{
+    overflow: hidden;
 }
 </style>
