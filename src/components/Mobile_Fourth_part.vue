@@ -1,107 +1,115 @@
 <template>
 	<div class="m_appointment__main">
-		<div class="appointment__content">
-			<form class="appointment_input__form">
-				<div class="appointment__title" id="m_appointment">
-					Записаться на пробный урок
-				</div>
-				<div class="appointment__text">
-					Чтобы мы могли с вами связаться, оставьте ваши контакты
-				</div>
-				<div class="form__item">
-					<!-- Фамилия Имя -->
-					<div class="input__wrapper">
-						<div
-							class="input__checkMark"
-							v-show="!fullNameError && !fullNameIsFocused"
-						></div>
-						<input
-							class="inputCustom"
-							placeholder="Фамилия Имя"
-							v-model="fullname"
-							v-on:blur="validationFullName()"
-							v-on:focus="fullNameIsFocused = true"
-							v-bind:class="{
-								inputCustomError: fullNameError,
-							}"
-						/>
-						<div class="input__errorLabel" v-show="fullNameError">
-							Неверный формат. Введите только буквы.
+		<div class="m_appointment__bg">
+			<img src="./assets/Mobile/appointment/appointment_bg.svg" alt="" />
+		</div>
+		<div class="container">
+			<div class="appointment__content">
+				<form class="appointment_input__form">
+					<div class="appointment__title" id="m_appointment">
+						Записаться на пробный урок
+					</div>
+					<div class="appointment__text">
+						Чтобы мы могли с вами связаться, оставьте ваши контакты
+					</div>
+					<div class="form__item">
+						<!-- Фамилия Имя -->
+						<div class="input__wrapper">
+							<div
+								class="input__checkMark"
+								v-show="!fullNameError && !fullNameIsFocused"
+							></div>
+							<input
+								class="inputCustom"
+								placeholder="Фамилия Имя"
+								v-model="fullname"
+								v-on:blur="validationFullName()"
+								v-on:focus="fullNameIsFocused = true"
+								v-bind:class="{
+									inputCustomError: fullNameError,
+								}"
+							/>
+							<div
+								class="input__errorLabel"
+								v-show="fullNameError"
+							>
+								Неверный формат. Введите только буквы.
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="form__item">
-					<!-- Телефонька -->
-					<div class="input__wrapper">
-						<div
-							class="input__checkMark"
-							v-show="!phoneError && !phoneIsFocused"
-						></div>
-						<input
-							v-model="phone"
-							class="inputCustom"
-							type="tel"
-							placeholder="Телефон"
-							v-on:blur="validataionPhone()"
-							v-on:focus="phoneIsFocused = true"
-							v-bind:class="{
-								inputCustomError: phoneError,
-							}"
-						/>
-						<div class="input__errorLabel" v-show="phoneError">
-							Неверный формат. Введите только цифры.
+					<div class="form__item">
+						<!-- Телефонька -->
+						<div class="input__wrapper">
+							<div
+								class="input__checkMark"
+								v-show="!phoneError && !phoneIsFocused"
+							></div>
+							<input
+								v-model="phone"
+								class="inputCustom"
+								type="tel"
+								placeholder="Телефон"
+								v-on:blur="validataionPhone()"
+								v-on:focus="phoneIsFocused = true"
+								v-bind:class="{
+									inputCustomError: phoneError,
+								}"
+							/>
+							<div class="input__errorLabel" v-show="phoneError">
+								Неверный формат. Введите только цифры.
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="form__item">
-					<!-- Почта -->
-					<div class="input__wrapper">
-						<div
-							class="input__checkMark"
-							v-show="!emailError && !emailIsFocused"
-						></div>
-						<input
-							v-model="email"
-							class="inputCustom"
-							type="email"
-							placeholder="Email"
-							v-on:blur="validataionEmail()"
-							v-on:focus="emailIsFocused = true"
-							v-bind:class="{
-								inputCustomError: emailError,
-							}"
-						/>
-						<div class="input__errorLabel" v-show="emailError">
-							Неверный формат. Введите корректный email.
+					<div class="form__item">
+						<!-- Почта -->
+						<div class="input__wrapper">
+							<div
+								class="input__checkMark"
+								v-show="!emailError && !emailIsFocused"
+							></div>
+							<input
+								v-model="email"
+								class="inputCustom"
+								type="email"
+								placeholder="Email"
+								v-on:blur="validataionEmail()"
+								v-on:focus="emailIsFocused = true"
+								v-bind:class="{
+									inputCustomError: emailError,
+								}"
+							/>
+							<div class="input__errorLabel" v-show="emailError">
+								Неверный формат. Введите корректный email.
+							</div>
 						</div>
 					</div>
-				</div>
-				<!-- Чекбокс -->
-				<div
-					class="form_item__checkbox form__item"
-					v-on:click="checkBoxChecked = !checkBoxChecked"
-				>
+					<!-- Чекбокс -->
 					<div
-						class="checkbox_custom"
-						v-bind:class="{ checkbox_bgrd: checkBoxChecked }"
-					></div>
-					<label>
-						Я принимаю
-						<a class="label__link" href=""
-							>пользовательское соглашение</a
-						>
-						и
-						<a class="label__link" href=""
-							>политику конфиденциальности</a
-						>.
-					</label>
-				</div>
-				<div>
-					<a class="button" href="#">
-						Записаться
-					</a>
-				</div>
-			</form>
+						class="form_item__checkbox form__item"
+						v-on:click="checkBoxChecked = !checkBoxChecked"
+					>
+						<div
+							class="checkbox_custom"
+							v-bind:class="{ checkbox_bgrd: checkBoxChecked }"
+						></div>
+						<label>
+							Я принимаю
+							<a class="label__link" href=""
+								>пользовательское соглашение</a
+							>
+							и
+							<a class="label__link" href=""
+								>политику конфиденциальности</a
+							>.
+						</label>
+					</div>
+					<div>
+						<a class="button" href="#">
+							Записаться
+						</a>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </template>
@@ -191,18 +199,29 @@ export default {
 }
 
 /* Appointment */
+.m_appointment__bg img{
+	object-fit: cover;
+	width: 100%;
+}
+
+.container{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 .m_appointment__main {
 	position: relative;
 	width: 100%;
-	/* background: url("./assets/images/appointment/appointment_bg2.svg"); */
-	background-size: cover;
-	background-position: center center;
-	padding: 210px 7px 0;
+	/* padding: 466px 7px 171px; */
 }
 
 .appointment__content {
 	top: 0;
-	margin-top: 27px;
+	margin-top: 115vw;
 	width: 100%;
 }
 

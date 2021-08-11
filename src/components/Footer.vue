@@ -58,16 +58,6 @@
 				</div>
 				<div class="link__wrapper">
 					<a class="underlined__item" href="./Dogovor-oferta.docx"
-						>Политика конфиденциальности</a
-					>
-				</div>
-				<div class="link__wrapper">
-					<a class="underlined__item" href="./Dogovor-oferta.docx"
-						>Обработка персональных данных</a
-					>
-				</div>
-				<div class="link__wrapper">
-					<a class="underlined__item" href="./Dogovor-oferta.docx"
 						>Договор-оферта</a
 					>
 				</div>
@@ -86,7 +76,7 @@
 	</div>
 </template>
 <style scoped>
-@media screen and (max-width:484px) {
+@media screen and (max-width:344px) {
 	.footer__container {
 		margin-left: 28px;
 		margin-right: 25px;
@@ -99,7 +89,7 @@
 		margin: 0;
 	}
 }
-@media screen and (min-width: 485px) {
+@media screen and (min-width: 345px) {
 	.footer__container {
 		margin-left: 28px;
 		margin-right: 25px;
