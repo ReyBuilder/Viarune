@@ -10,16 +10,6 @@
 				v-bind:showFilters="showFilters"
 			></About_subj>
 			<Appointment
-				v-bind:checkBoxChecked="checkBoxChecked"
-				v-bind:fullNameError="fullNameError"
-				v-bind:phoneError="phoneError"
-				v-bind:emailError="emailError"
-				v-bind:fullname="fullname"
-				v-bind:phone="phone"
-				v-bind:email="email"
-				v-bind:fullNameIsFocused="fullNameIsFocused"
-				v-bind:phoneIsFocused="phoneIsFocused"
-				v-bind:emailIsFocused="emailIsFocused"
 			></Appointment>
 			<Footer></Footer>
 			<PopUp
@@ -37,16 +27,6 @@
 				v-bind:showFilters="showFilters"
 			></Mobile_about_subj>
 			<Mobile_appointment
-				v-bind:checkBoxChecked="checkBoxChecked"
-				v-bind:fullNameError="fullNameError"
-				v-bind:phoneError="phoneError"
-				v-bind:emailError="emailError"
-				v-bind:fullname="fullname"
-				v-bind:phone="phone"
-				v-bind:email="email"
-				v-bind:fullNameIsFocused="fullNameIsFocused"
-				v-bind:phoneIsFocused="phoneIsFocused"
-				v-bind:emailIsFocused="emailIsFocused"
 			></Mobile_appointment>
 			<Footer></Footer>
 			<Mobile_PopUp
@@ -85,31 +65,9 @@ export default {
 		coursePopUp() {
 			return this.courses[this.currentCourseIndex];
 		},
-		// fullname: {
-		// 	get() {
-		// 		return this.fullname;
-		// 	},
-		// 	set(value) {
-		// 		this.fullname = value;
-		// 	},
-		// },
 	},
 	data() {
 		return {
-			showFilters: false,
-			currentCourseIndex: null,
-
-			checkBoxChecked: false,
-			fullNameError: false,
-			phoneError: false,
-			emailError: false,
-			fullname: "",
-			phone: "",
-			email: "",
-			fullNameIsFocused: true,
-			phoneIsFocused: true,
-			emailIsFocused: true,
-
 			filters: [
 				"Программирование",
 				"Дизайн",
@@ -122,7 +80,7 @@ export default {
 					title: "Язык программирования: Scratch",
 					img: "./courses_logos/logo_scratch.svg",
 					desc:
-						"Детский язык программирования, похожий на конструктор Lego: программы собираются Детский язык программирования, похожий на конструктор Lego: программы собираются Детский язык программирования, похожий на конструктор Lego: программы собираются Детский язык программирования, похожий на конструктор Lego: программы собираются",
+						"Детский язык программирования, похожий на конструктор Lego: программы собираются",
 					merits: [
 						"Базовым понятиям математического анализа, дискретной математики, линейной алгебры, стандартной и аналитической геометрии;",
 						"Решению олимпиадных задач;",

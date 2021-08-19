@@ -167,47 +167,21 @@ export default {
 			this.emailError = !this.email.match(/^\S*@\S*$/);
 		},
 	},
-	props: {
-		checkBoxChecked: {
-			type: Boolean,
-			required: true,
-		},
-		fullNameError: {
-			type: Boolean,
-			required: true,
-		},
-		phoneError: {
-			type: Boolean,
-			required: true,
-		},
-		emailError: {
-			type: Boolean,
-			required: true,
-		},
-		fullname: {
-			type: String,
-			required: true,
-		},
-		phone: {
-			type: String,
-			required: true,
-		},
-		email: {
-			type: String,
-			required: true,
-		},
-		fullNameIsFocused: {
-			type: Boolean,
-			required: true,
-		},
-		phoneIsFocused: {
-			type: Boolean,
-			required: true,
-		},
-		emailIsFocused: {
-			type: Boolean,
-			required: true,
-		},
+	data() {
+		return {
+			showFilters: false,
+			currentCourseIndex: null,
+			checkBoxChecked: false,
+			fullNameError: false,
+			phoneError: false,
+			emailError: false,
+			fullname: "",
+			phone: "",
+			email: "",
+			fullNameIsFocused: true,
+			phoneIsFocused: true,
+			emailIsFocused: true,
+		};
 	},
 };
 </script>
