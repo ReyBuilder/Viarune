@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "viastudy",
+  "private_key_id": "8b9f81f6195c20804da5d8cc513ab7d98efdf7e2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQDIAhvuuO18mGXh\nUJJHN1n24ItJUYGh4S+oB2ysZoyS7R29cq5f6e0aVgRZ343yLFwPSAWpj4roiy/f\npWVVItzRE04duaaZf3uX7cpvshUbpRU7IhdgSOi660eK4OpD2JDDZmyl5ICVF1UP\nXmVS5QUOXxi6s/aKjbExErG4mOHChis/Rak1grZd9ox2z1M6Nrc/LcMV++pO1dl2\nAOYDJ+Hw/gpfa0WxFShqOGF05JrjNCjiwyE7slHADR/1k8z/ON2mecj5GQEXRorC\n0pj8UCCZTaMgeqWNevxVHThe7McJZf7NNVNogGhCuuyk7Ip3habO3HSKx376dIEy\nf3d/mtqJAgMBAAECgf8wdR3BV3CNm2W78S488Y89dMk4xoy17XXxqfbjYV5UKRX1\nl17JWqjv80QY2d7pvrtQDYme0HgMqODfxqdVTHBNyqvdI92opU6B7lBGy83tc57M\nY1dn2l5QXt/wVoUF1EI0A8Cy+WKhh/28+b0BO4Q/1rAg/CagoV3DH13Kx36vaQ6q\n72pGKDuYEpio8BUS8mnrPS9a6bNCceEa01ShiBpkFPzC40luJkt5n9uLam6E+UuY\n/Pl8GQ7TxGJIDHmNXqMsgxJRnQWO70jatyK3vF01W3iJ9nd/NUA3B3zwnd74FVTD\nokssc527nBgBY/Hb7Z+wTxTaXzI8dbOHW+zEo50CgYEA6RbLkT0giBUGWZ4v3WKe\n5zz/z0G+kWl9GFK7ORLZu68tUjX1bpHhRu973GB44CcUs/5PxflylZnFH1wLlkYp\nGtSVqdOktFET0lwZ8uky1QgSo0KFqdhJhqokL5qkCeYQQIiDNhNymElljRPeRe76\naz9HfZJn5b9O6jfSdrlOlv0CgYEA26rnWtsYGViRq1ISWpVVmRFsNnDR0c1aucCZ\nGUs5onEqy6pASClYcBis7UOiblHZhIq9Ed5BZXi32AeRnbRC7LheVoweA3CJKx2Z\nzhWfw2iKZCGZQF9rzefl3Pn1+zC5yCuYP71RyxXJtrNJE8T8lOgTmi8HSp5IREtL\nFUEX9X0CgYAwGmE2fwv4qYYe9pNgN9sdU6xjRGkkr0V+wIwc0jQXFKbgwXv+LqL0\nNbY1G7+2WrpeDwy9iaZJE2vn9eH6SE5xWA/u9VuXTugtUI6WX+P6rOjTwoW9MIK0\nBObk4CAcXttZxhJ2FXtfzD3l6ITFn/UULwH8+zrv4hRSJ+UKVWHPrQKBgQDES6Ca\nbBbI74Ccm6aTE8d+FTeiHocg+GUOgLFPDQ3fv0kC3oy671d8NFCzZTENbE74RhJW\nmUnPJ2UBwyG4z5DOgKKsrGFVqYap5LXAl0pBEHY6rFuKTrrDMWsTYLsTUKNz4KEY\ntFEXLc0nWmb/J5SebBS4PzZA09i4TqA1ygli8QKBgHtXFIEqATMpgNsDs7Y35/If\n+eWYjZoVBU9AZXEyoAA96OIilY3nLbXfp1b6IqBuz8CbCuKmnrhetgCMH9HvSRrp\nyFFPbFCMi5Mp50VuEPNpChX0OytZQ1oSO7+NO5uwgR9T4CTaPB5UI+viVmcOihVI\nw0QNgR0u6tRfuSnQtDzC\n-----END PRIVATE KEY-----\n",
+  "client_email": "viastudy@viastudy.iam.gserviceaccount.com",
+  "client_id": "118256635676219852782",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/viastudy%40viastudy.iam.gserviceaccount.com"
+}

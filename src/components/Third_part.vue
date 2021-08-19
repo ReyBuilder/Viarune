@@ -47,10 +47,17 @@
 							></div>
 						</div>
 						<div class="card__text">
-							{{ item.desc }}
+							{{ textPreview(item.desc) }}
 						</div>
 						<div class="card__underground">
-							<a class="card__button" href="#desktop_appointment" v-smooth-scroll="{ duration: 2000, offset: -50 }">
+							<a
+								class="card__button"
+								href="#desktop_appointment"
+								v-smooth-scroll="{
+									duration: 2000,
+									offset: -50,
+								}"
+							>
 								<div class="buttonBox">
 									Записаться
 								</div>
@@ -105,6 +112,16 @@ export default {
 				});
 				return tmp;
 			} else return this.courses;
+		},
+	},
+	methods: {
+		textPreview(text) {
+			if (text.length < 82) return text;
+			else {
+				const tmp = text.match(/^.{0,82}\s/);
+				if (!tmp || !tmp[0]) return text;
+				return tmp[0].substring(0,tmp[0].length-1)+"..."
+			}
 		},
 	},
 };

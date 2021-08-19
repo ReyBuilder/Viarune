@@ -64,7 +64,7 @@
 									class="input__errorLabel"
 									v-show="phoneError"
 								>
-									Неверный формат. Введите только цифры.
+									Неверный формат. Введите корректный телефон.
 								</div>
 							</div>
 						</div>
@@ -111,7 +111,11 @@
 							</label>
 						</div>
 						<div>
-							<a class="buttonBox buttonOrange" href="#">
+							<a
+								class="buttonBox buttonOrange"
+								href="#"
+								v-on:click.prevent="sendRequset()"
+							>
 								Записаться
 							</a>
 						</div>
@@ -122,9 +126,34 @@
 	</div>
 </template>
 <script>
+import { GoogleSpreadsheet } from "google-spreadsheet";
+import creds from "../google-api-key.json";
 export default {
 	methods: {
-		validataion() {},
+		async sendRequset() {
+			if (this.validataion) {
+				let doc = new GoogleSpreadsheet(
+					"1VRhWH8856QPfIxbyCKLnacH863D8Jir4BleZ-9mlBqo"
+				);
+				await doc.useServiceAccountAuth(creds);
+				await doc.loadInfo();
+				const sheet = await doc.sheetsByIndex[0];
+				await sheet.addRows([
+					{
+						ФИО: this.fullname,
+						Телефон: this.phone,
+						Почта: this.email,
+					},
+				]);
+				// Показать попу
+				this.email = "";
+				this.phone = "";
+				this.fullname = "";
+			}
+		},
+		validataion() {
+			return !this.fullNameError && !this.phoneError && !this.emailError;
+		},
 		validationFullName() {
 			this.fullNameIsFocused = false;
 			this.fullNameError = !this.fullname.match(/^\S+(\s\S+)*$/);
@@ -138,7 +167,6 @@ export default {
 			this.emailError = !this.email.match(/^\S*@\S*$/);
 		},
 	},
-	computed: {},
 	props: {
 		checkBoxChecked: {
 			type: Boolean,
@@ -207,27 +235,25 @@ export default {
 }
 
 .appointment__wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .appointment__main {
 	position: relative;
 	width: 100%;
-	/* background: url("./assets/images/appointment/appointment_bg2.svg");
-    background-size: cover;
-    background-position: center center; */
 }
 
 .appointment__content {
 	top: 0;
 	margin-top: 27px;
+	/* margin-top: 2vw; */
 	width: 100%;
 	max-width: 405px;
 }
@@ -278,7 +304,7 @@ export default {
 	width: 100%;
 	margin: -217px auto 0;
 	max-width: 925px;
-    position: relative;
+	position: relative;
 }
 
 /* Inputs */

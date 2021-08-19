@@ -71,20 +71,28 @@ import Mobile_PopUp from "./components/Mobile_PopUp.vue";
 
 export default {
 	name: "App",
-    methods:{
-        clickCourse(event){
-            this.currentCourseIndex = event;
-            document.body.classList.add('block_scroll');
-        },
-        closePopup(){
-            this.currentCourseIndex = null;
-            document.body.classList.remove('block_scroll');
-        },
-    },
+	methods: {
+		clickCourse(event) {
+			this.currentCourseIndex = event;
+			document.body.classList.add("block_scroll");
+		},
+		closePopup() {
+			this.currentCourseIndex = null;
+			document.body.classList.remove("block_scroll");
+		},
+	},
 	computed: {
 		coursePopUp() {
 			return this.courses[this.currentCourseIndex];
 		},
+		// fullname: {
+		// 	get() {
+		// 		return this.fullname;
+		// 	},
+		// 	set(value) {
+		// 		this.fullname = value;
+		// 	},
+		// },
 	},
 	data() {
 		return {
@@ -114,7 +122,7 @@ export default {
 					title: "Язык программирования: Scratch",
 					img: "./courses_logos/logo_scratch.svg",
 					desc:
-						"Детский язык программирования, похожий на конструктор Lego: программы собираются...",
+						"Детский язык программирования, похожий на конструктор Lego: программы собираются Детский язык программирования, похожий на конструктор Lego: программы собираются Детский язык программирования, похожий на конструктор Lego: программы собираются Детский язык программирования, похожий на конструктор Lego: программы собираются",
 					merits: [
 						"Базовым понятиям математического анализа, дискретной математики, линейной алгебры, стандартной и аналитической геометрии;",
 						"Решению олимпиадных задач;",
@@ -156,7 +164,7 @@ export default {
 					title: "Элементарная информатика (дети)",
 					img: "./courses_logos/logo_informatics.svg",
 					desc:
-						"Для тех, у кого нет времени на обучение. Изучайте только актуальную для вас тему: эксель...",
+						"Для тех, у кого нет времени на обучение. Изучайте только актуальную для вас тему: эксель",
 					merits: [
 						"Базовым понятиям математического анализа, дискретной математики, линейной алгебры, стандартной и аналитической геометрии;",
 						"Решению олимпиадных задач;",
@@ -233,7 +241,7 @@ export default {
 		display: block;
 	}
 }
-.block_scroll{
-    overflow: hidden;
+.block_scroll {
+	overflow: hidden;
 }
 </style>
