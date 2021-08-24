@@ -9,8 +9,7 @@
 				v-bind:filters="filters"
 				v-bind:showFilters="showFilters"
 			></About_subj>
-			<Appointment
-			></Appointment>
+			<Appointment></Appointment>
 			<Footer></Footer>
 			<PopUp
 				v-bind:course="coursePopUp"
@@ -26,8 +25,7 @@
 				v-bind:filters="filters"
 				v-bind:showFilters="showFilters"
 			></Mobile_about_subj>
-			<Mobile_appointment
-			></Mobile_appointment>
+			<Mobile_appointment></Mobile_appointment>
 			<Footer></Footer>
 			<Mobile_PopUp
 				v-bind:course="coursePopUp"
@@ -68,6 +66,8 @@ export default {
 	},
 	data() {
 		return {
+			showFilters: false,
+			currentCourseIndex: null,
 			filters: [
 				"Программирование",
 				"Дизайн",

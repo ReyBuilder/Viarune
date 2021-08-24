@@ -161,8 +161,6 @@ export default {
 	},
 	data() {
 		return {
-			showFilters: false,
-			currentCourseIndex: null,
 			checkBoxChecked: false,
 			fullNameError: false,
 			phoneError: false,
