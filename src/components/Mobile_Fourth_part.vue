@@ -123,7 +123,7 @@ import creds from "../google-api-key.json";
 export default {
 	methods: {
 		async sendRequset() {
-			if (this.validataion) {
+			if (this.validataion()) {
 				let doc = new GoogleSpreadsheet(
 					"1VRhWH8856QPfIxbyCKLnacH863D8Jir4BleZ-9mlBqo"
 				);
@@ -144,7 +144,10 @@ export default {
 			}
 		},
 		validataion() {
-			return !this.fullNameError && !this.phoneError && !this.emailError;
+			this.validationFullName();
+			this.validataionPhone();
+			this.validataionEmail();
+			return !this.fullNameError && !this.phoneError && !this.emailError && this.checkBoxChecked;
 		},
 		validationFullName() {
 			this.fullNameIsFocused = false;
