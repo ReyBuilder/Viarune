@@ -49,9 +49,6 @@ import Mobile_PopUp from "./components/Mobile_PopUp.vue";
 
 export default {
 	name: "App",
-	created() {
-		document.title = "Viarune study";
-	},
 	methods: {
 		clickCourse(event) {
 			this.currentCourseIndex = event;
