@@ -207,7 +207,6 @@ export default {
 /* Cards Containers */
 .subj__cards {
 	padding-top: 40px;
-	padding-bottom: 75px;
 }
 .subj_cards__inner {
 	display: flex;

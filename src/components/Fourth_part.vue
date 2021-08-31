@@ -229,7 +229,6 @@ export default {
 .appointment__content {
 	top: 0;
 	margin-top: 27px;
-	/* margin-top: 2vw; */
 	width: 100%;
 	max-width: 405px;
 }
@@ -278,9 +277,7 @@ export default {
 
 .container {
 	width: 100%;
-	margin: -217px auto 0;
 	max-width: 925px;
-	position: relative;
 }
 
 /* Inputs */

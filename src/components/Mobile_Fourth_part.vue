@@ -218,14 +218,14 @@ export default {
 }
 
 .m_appointment__main {
+	margin-top: 50px;
 	position: relative;
 	width: 100%;
-	/* padding: 466px 7px 171px; */
 }
 
 .appointment__content {
 	top: 0;
-	margin-top: 115vw;
+	margin-top: 140vw;
 	width: 100%;
 }
 

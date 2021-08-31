@@ -196,10 +196,10 @@
 	height: 28px;
 	width: 28px;
 	background: url("./assets/icons/icon_intro_call.svg") center no-repeat;
+	background-position: 0px;
 }
 .nav__phone:hover .nav_phone__icon {
-	background: url("./assets/icons/icon_intro_call_active.svg") center
-		no-repeat;
+	background-position: -28px;
 }
 .nav__phone:focus {
 	box-shadow: 0 0 0 1px #fff;
