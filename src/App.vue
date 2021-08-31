@@ -49,6 +49,9 @@ import Mobile_PopUp from "./components/Mobile_PopUp.vue";
 
 export default {
 	name: "App",
+	created() {
+		document.title = "Viarune study";
+	},
 	methods: {
 		clickCourse(event) {
 			this.currentCourseIndex = event;
@@ -174,10 +177,7 @@ export default {
 		Mobile_about_subj,
 		Mobile_appointment,
 		Mobile_PopUp,
-	},
-	created() {
-		document.title = "Viarune study";
-	},
+	}
 };
 </script>
 <style>

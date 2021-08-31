@@ -19,8 +19,8 @@
 				<a
 					class="filterWrapper"
 					href="#"
-					v-for="item in filters"
-					:key="item"
+					v-for="(item, i) in filters"
+					:key="'C' + i"
 					v-on:click.prevent="currentFilter = item"
 				>
 					<div class="buttonBoxFilter ">
@@ -32,8 +32,8 @@
 				<div class="subj_cards__inner">
 					<div
 						class="subj__card"
-						v-for="(item, index) in filteredCourses"
-						:key="item"
+						v-for="item in filteredCourses"
+						:key="item.id"
 					>
 						<div class="card__header">
 							<div class="card__title">
