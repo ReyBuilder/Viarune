@@ -14,8 +14,8 @@
 			<a
 				class="button__filter"
 				href="#"
-				v-for="(item, i) in filters"
-				:key="'A' + i"
+				v-for="(item, index) in filters"
+				:key="'A' + index"
 				v-on:click.prevent="currentFilter = item"
 			>
 				{{ item }}
@@ -25,8 +25,8 @@
 			<div class="subj_cards__inner">
 				<div
 					class="subj__card"
-					v-for="(item, i) in showedCourses"
-					:key="'B' + i"
+					v-for="(item, index) in showedCourses"
+					:key="'B' + index"
 				>
 					<div class="card__header">
 						<div class="card__title">
