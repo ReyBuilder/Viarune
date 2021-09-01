@@ -23,13 +23,13 @@
 				Чему научится студент на базовом курсе:
 			</div>
 			<ul>
-				<li v-for="item in course.merits" :key="item">{{ item }}</li>
+				<li v-for="(item, i) in course.merits" :key="'A' + i">{{ item }}</li>
 			</ul>
 			<div class="popUp__statistics">
 				<div
 					class="popUp_stat__item"
-					v-for="item in course.statistics"
-					:key="item"
+					v-for="(item, i) in course.statistics"
+					:key="'A' + i"
 				>
 					<div class="stat_item__circle">{{ item.number }}</div>
 					<div class="stat_item__text">
