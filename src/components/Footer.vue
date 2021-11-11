@@ -36,7 +36,7 @@
 							<img src="./assets/icons/icon_call.svg" alt="" />
 						</div>
 						<div class="phone__digits">
-							+7 919 911-89-50
+							+7 912 013 39-97
 						</div>
 					</div>
 				</div>

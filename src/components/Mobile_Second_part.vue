@@ -24,8 +24,8 @@
 					/>
 				</div>
 				<div class="infoblock_item__text">
-					Удобная и понятная система для управления <br />
-					вашими уроками;
+					Акутальное расписание уроков в вашем <br />
+					google календаре;
 				</div>
 			</div>
 			<div class="infoblock__item">
@@ -37,7 +37,7 @@
 				</div>
 				<div class="infoblock_item__text">
 					Ответы на любые вопросы можно узнать в чате <br />
-					с преподавателем;
+					telegram с преподавателем;
 				</div>
 			</div>
 			<div class="infoblock__item">
