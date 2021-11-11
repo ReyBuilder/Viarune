@@ -99,7 +99,7 @@ export default {
 				{
 					name: "EGEMath",
 					title: "ЕГЭ математика",
-					img: "./courses_logos/logo_scratch.svg",
+					img: "./courses_logos/logo_math.svg",
 					desc:
 						"Опытный педагог поможет подготовится к единому государственному экзамену (ЕГЭ) по математике",
 					merits: [
@@ -119,7 +119,7 @@ export default {
 				{
 					name: "OGEmath",
 					title: "ОГЭ математика",
-					img: "./courses_logos/logo_scratch.svg",
+					img: "./courses_logos/logo_math.svg",
 					desc:
 						"Опытный педагог поможет подготовится к общему государственному экзамену (ОГЭ) по математике",
 					merits: [
