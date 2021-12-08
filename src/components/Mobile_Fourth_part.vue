@@ -155,7 +155,7 @@ export default {
 		},
 		validataionPhone() {
 			this.phoneIsFocused = false;
-			this.phoneError = !this.phone.match(/^\+\d{4,}$/);
+			this.phoneError = !this.phone.match(/^\d{4,}$/);
 		},
 		validataionEmail() {
 			this.emailIsFocused = false;
