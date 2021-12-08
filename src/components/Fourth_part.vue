@@ -114,7 +114,7 @@
 							<a
 								class="buttonBox buttonOrange"
 								href="#"
-								v-on:click.prevent="sendRequset()"
+								v-on:click.prevent="sendRequset();"
 							>
 								Записаться
 							</a>
@@ -133,7 +133,7 @@ export default {
 		async sendRequset() {
 			if (this.validataion()) {
 				let doc = new GoogleSpreadsheet(
-					"1VRhWH8856QPfIxbyCKLnacH863D8Jir4BleZ-9mlBqo"
+					"1sQhDgvZHGUSNGBHy0gtd-B0qYMXiBTYQfM2vbtg1Njw"
 				);
 				await doc.useServiceAccountAuth(creds);
 				await doc.loadInfo();
@@ -149,6 +149,7 @@ export default {
 				this.email = "";
 				this.phone = "";
 				this.fullname = "";
+				this.$emit('validate');
 			}
 		},
 		validataion() {

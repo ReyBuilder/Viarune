@@ -9,7 +9,7 @@
 				v-bind:filters="filters"
 				v-bind:showFilters="showFilters"
 			></About_subj>
-			<Appointment></Appointment>
+			<Appointment v-on:validate="validationPopupShow"></Appointment>
 			<Footer></Footer>
 			<PopUp
 				v-bind:course="coursePopUp"
@@ -25,13 +25,14 @@
 				v-bind:filters="filters"
 				v-bind:showFilters="showFilters"
 			></Mobile_about_subj>
-			<Mobile_appointment></Mobile_appointment>
+			<Mobile_appointment v-on:validate="validationPopupShow"></Mobile_appointment>
 			<Footer></Footer>
 			<Mobile_PopUp
 				v-bind:course="coursePopUp"
 				v-on:close-popup="closePopup"
 			></Mobile_PopUp>
 		</div>
+		<ValidationPopup v-bind:active="isValidationPopupActive" v-on:close="validationPopupClose"></ValidationPopup>
 	</div>
 </template>
 <script>
@@ -46,6 +47,7 @@ import Mobile_about_school from "./components/Mobile_Second_part.vue";
 import Mobile_about_subj from "./components/Mobile_Third_part.vue";
 import Mobile_appointment from "./components/Mobile_Fourth_part.vue";
 import Mobile_PopUp from "./components/Mobile_PopUp.vue";
+import ValidationPopup from "./components/ValidationPopup.vue";
 
 export default {
 	name: "App",
@@ -58,6 +60,14 @@ export default {
 			this.currentCourseIndex = null;
 			document.body.classList.remove("block_scroll");
 		},
+		validationPopupShow() {
+			this.isValidationPopupActive = true;
+			document.body.classList.add("block_scroll");
+		},
+		validationPopupClose() {
+			this.isValidationPopupActive = false;
+			document.body.classList.remove("block_scroll");
+		}
 	},
 	computed: {
 		coursePopUp() {
@@ -66,6 +76,7 @@ export default {
 	},
 	data() {
 		return {
+			isValidationPopupActive: false,
 			showFilters: false,
 			currentCourseIndex: null,
 			filters: [
@@ -191,6 +202,7 @@ export default {
 		Mobile_about_subj,
 		Mobile_appointment,
 		Mobile_PopUp,
+		ValidationPopup,
 	}
 };
 </script>

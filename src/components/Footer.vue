@@ -57,7 +57,6 @@
 </template>
 <style scoped>
 .footer__main {
-    padding-top: 77px;
     position: relative;
 
     font-weight: 500;
@@ -83,8 +82,8 @@
 }
 
 .title {
-    font-size: 18px;
-
+    font-weight: 800;
+    font-size: 44px;
     margin-bottom: 38px;
 }
 .icon__wrapper {
@@ -167,6 +166,7 @@
     }
     .footer__main {
         margin-bottom: 65px;
+        margin-top: 30px;
     }
 }
 
@@ -178,7 +178,8 @@
     }
     .footer__main {
         text-align: center;
-        margin-bottom: 144px;
+        margin-bottom: 110px;
+        margin-top: 40px;
     }
     .block__content {
         justify-content: center;
